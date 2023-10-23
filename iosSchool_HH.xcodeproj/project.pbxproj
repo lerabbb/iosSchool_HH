@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307422AE11A8F00D9223D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				3F2307472AE11A9100D9223D /* Assets.xcassets */,
 				3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */,
 				3F23074C2AE11A9100D9223D /* Info.plist */,
+				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 			);
 			path = iosSchool_HH;
 			sourceTree = "<group>";
@@ -77,6 +80,7 @@
 				3F2307372AE11A8F00D9223D /* Sources */,
 				3F2307382AE11A8F00D9223D /* Frameworks */,
 				3F2307392AE11A8F00D9223D /* Resources */,
+				3F071B8E2AE6ADCC0002BEB5 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -133,12 +137,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F071B8E2AE6ADCC0002BEB5 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F2307372AE11A8F00D9223D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */,
+				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
 			);
@@ -293,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BXYB74VNZ7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosSchool_HH/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -321,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BXYB74VNZ7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosSchool_HH/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
