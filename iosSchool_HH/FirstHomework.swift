@@ -85,19 +85,35 @@ class Character {
     }
 }
 
-class CharacterGenerator {
-    static private let values: [String] = ["abcd", "efg", "hijk", "lmn", "op", "qrst", "uvw", "xyz"]
+protocol CharacterGeneratorProtocol {
+    var values: [String] { get }
 
-    static func generate() -> Character {
+    init(values: [String])
+
+    func generate() -> Character
+}
+
+class CharacterGenerator: CharacterGeneratorProtocol {
+    let values: [String]
+
+    required init(values: [String]) {
+        self.values = values
+    }
+
+    func generate() -> Character {
         return Character(
             id: Int.random(in: 0..<100),
-            name: values.randomElement() ?? "aaa",
-            species: values.randomElement() ?? "bbb",
-            image: values.randomElement() ?? "ccc",
-            url: values.randomElement() ?? "ddd",
+            name: getRandomString(),
+            species: getRandomString(),
+            image: getRandomString(),
+            url: getRandomString(),
             episode: ["ep1", "ep2", "ep3", "ep4"],
             gender: Character.Gender.random(),
             status: Character.Status.random()
         )
+    }
+
+    func getRandomString() -> String {
+        return values.randomElement() ?? "xxx"
     }
 }
