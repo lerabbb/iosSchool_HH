@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
+		3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307422AE11A8F00D9223D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHomework.swift; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3F23074C2AE11A9100D9223D /* Info.plist */,
 				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
+				3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */,
 			);
 			path = iosSchool_HH;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
+				3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
