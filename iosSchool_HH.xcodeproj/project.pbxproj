@@ -15,6 +15,7 @@
 		3F2307462AE11A8F00D9223D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307442AE11A8F00D9223D /* Main.storyboard */; };
 		3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307472AE11A9100D9223D /* Assets.xcassets */; };
 		3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */; };
+		3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3F2307472AE11A9100D9223D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F23074A2AE11A9100D9223D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F23074C2AE11A9100D9223D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */,
 				3F23074C2AE11A9100D9223D /* Info.plist */,
 				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
+				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
 				3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */,
 			);
 			path = iosSchool_HH;
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */,
+				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
 				3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */,
