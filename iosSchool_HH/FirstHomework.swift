@@ -89,7 +89,6 @@ protocol CharacterGeneratorProtocol {
     var values: [String] { get }
 
     init(values: [String])
-
     func generate() -> Character
 }
 
