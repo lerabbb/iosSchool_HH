@@ -12,13 +12,5 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let generator = ColorGenerator(alpha: 1)
-        generator.changeColorCodes { colorCodes in
-            print(colorCodes)
-        }
-
-        generator.changeColor {
-            [0.0, 100.0, 200.0]
-        }
     }
 }
