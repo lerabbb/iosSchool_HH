@@ -12,15 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let generator1: CharacterGenerator = CharacterGenerator(
-            values: ["abcd", "efg", "hijk"]
-        )
+        let generator = ColorGenerator(alpha: 1)
+        generator.changeColorCodes { colorCodes in
+            print(colorCodes)
+        }
 
-        let generator2: CharacterGeneratorProtocol = CharacterGenerator(
-            values: ["bbb", "ccc", "nnn"]
-        )
-
-        let character1 = generator1.generate()
-        let character2 = generator2.generate()
+        generator.changeColor {
+            [0.0, 100.0, 200.0]
+        }
     }
 }
