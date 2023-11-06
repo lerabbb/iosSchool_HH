@@ -12,10 +12,17 @@
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307422AE11A8F00D9223D /* ViewController.swift */; };
-		3F2307462AE11A8F00D9223D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307442AE11A8F00D9223D /* Main.storyboard */; };
 		3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307472AE11A9100D9223D /* Assets.xcassets */; };
 		3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */; };
 		3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */; };
+		3FF07BD32AF91852008E4D37 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */; };
+		3FF07BD52AF91942008E4D37 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */; };
+		3FF07BD92AF922E2008E4D37 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BD82AF922E2008E4D37 /* AuthViewController.swift */; };
+		3FF07BDB2AF9230B008E4D37 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BDA2AF9230B008E4D37 /* AuthView.swift */; };
+		3FF07BDD2AF9242C008E4D37 /* AuthViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BDC2AF9242C008E4D37 /* AuthViewData.swift */; };
+		3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */; };
+		3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */; };
+		3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +32,18 @@
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F2307422AE11A8F00D9223D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F2307452AE11A8F00D9223D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F2307472AE11A9100D9223D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F23074A2AE11A9100D9223D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F23074C2AE11A9100D9223D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3FF07BD82AF922E2008E4D37 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3FF07BDA2AF9230B008E4D37 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		3FF07BDC2AF9242C008E4D37 /* AuthViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewData.swift; sourceTree = "<group>"; };
+		3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
+		3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
+		3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +76,41 @@
 		3F23073D2AE11A8F00D9223D /* iosSchool_HH */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07BD62AF9222A008E4D37 /* Modules */,
 				3F23073E2AE11A8F00D9223D /* AppDelegate.swift */,
 				3F2307402AE11A8F00D9223D /* SceneDelegate.swift */,
 				3F2307422AE11A8F00D9223D /* ViewController.swift */,
-				3F2307442AE11A8F00D9223D /* Main.storyboard */,
 				3F2307472AE11A9100D9223D /* Assets.xcassets */,
 				3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */,
 				3F23074C2AE11A9100D9223D /* Info.plist */,
 				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
 				3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */,
+				3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */,
+				3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */,
 			);
 			path = iosSchool_HH;
+			sourceTree = "<group>";
+		};
+		3FF07BD62AF9222A008E4D37 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07BD72AF92253008E4D37 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3FF07BD72AF92253008E4D37 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07BD82AF922E2008E4D37 /* AuthViewController.swift */,
+				3FF07BDA2AF9230B008E4D37 /* AuthView.swift */,
+				3FF07BDC2AF9242C008E4D37 /* AuthViewData.swift */,
+				3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */,
+				3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */,
+				3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +174,6 @@
 			files = (
 				3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */,
 				3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */,
-				3F2307462AE11A8F00D9223D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,22 +209,22 @@
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
+				3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */,
+				3FF07BD52AF91942008E4D37 /* AppCoordinator.swift in Sources */,
+				3FF07BD32AF91852008E4D37 /* BaseCoordinator.swift in Sources */,
+				3FF07BDD2AF9242C008E4D37 /* AuthViewData.swift in Sources */,
+				3FF07BDB2AF9230B008E4D37 /* AuthView.swift in Sources */,
+				3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */,
 				3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */,
+				3FF07BD92AF922E2008E4D37 /* AuthViewController.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
+				3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F2307442AE11A8F00D9223D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F2307452AE11A8F00D9223D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -332,7 +368,6 @@
 				INFOPLIST_FILE = iosSchool_HH/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,7 +396,6 @@
 				INFOPLIST_FILE = iosSchool_HH/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
