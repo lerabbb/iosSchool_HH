@@ -125,13 +125,13 @@ class CharacterGenerator: CharacterGeneratorProtocol {
     }
 
     func generateNameTree() -> (String) -> Void {
-        return {
+        {
             print("generateNameThree result: \($0)")
         }
     }
 
     func generateNameFour() -> (() -> String) {
-        return { [weak self] in
+        { [weak self] in
             let str: String = "generateNameFour result: "
 
             guard let self else {
