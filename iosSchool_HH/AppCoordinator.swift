@@ -17,7 +17,9 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     func start(window: UIWindow?) {
         self.window = window
 
-        setRoot(viewController: assembly.authCoordinator().make()) //authCoordinator -> registrationCoordinator in homework
+        setRoot(viewController: ViewController())
+        // setRoot(viewController: assembly.authCoordinator().make())
+        // authCoordinator -> registrationCoordinator in homework
     }
 
     private func setRoot(viewController: UIViewController?) {
