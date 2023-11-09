@@ -54,7 +54,7 @@ class Character {
     let species: String
     let image: String
     let url: String
-    let episode: [String]
+    var episode: [String]
     let gender: Gender
     let status: Status
 
@@ -79,40 +79,41 @@ class Character {
     }
 
     func description() {
-        print("[CHARACTER] id: \(id), name: \(name), species: \(species), image: \(image), url: \(url)")
-        print("episode: \(episode)")
-        print("gender: \(gender.rawValue), status: \(status.rawValue)")
+        print("name: \(name), gender: \(gender.rawValue), episode: \(episode)")
     }
 }
 
 protocol CharacterGeneratorProtocol {
-    var values: [String] { get }
+    var names: [String] { get }
+    var strings: [String] { get }
 
-    init(values: [String])
-    func generate() -> Character
+    init()
+    func generate(name: String?) -> Character
 }
 
 class CharacterGenerator: CharacterGeneratorProtocol {
-    let values: [String]
+    let names: [String]
+    let strings: [String]
 
-    required init(values: [String]) {
-        self.values = values
+    required init() {
+        self.names = ["Alice", "Bob", "Caroline", "Den", "Rick", "Maria"]
+        self.strings = ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]
     }
 
-    func generate() -> Character {
+    func generate(name: String?) -> Character {
         Character(
             id: Int.random(in: 0..<100),
-            name: getRandomString(),
-            species: getRandomString(),
-            image: getRandomString(),
-            url: getRandomString(),
-            episode: ["ep1", "ep2", "ep3", "ep4"],
+            name: name ?? getRandomValue(values: names),
+            species: getRandomValue(values: strings),
+            image: getRandomValue(values: strings),
+            url: getRandomValue(values: strings),
+            episode: ["ep1"],
             gender: Character.Gender.random(),
             status: Character.Status.random()
         )
     }
 
-    func getRandomString() -> String {
+    func getRandomValue(values: [String]) -> String {
         values.randomElement() ?? "xxx"
     }
 
@@ -139,5 +140,12 @@ class CharacterGenerator: CharacterGeneratorProtocol {
             }
             return str + self.getRandomString()
         }
+    }
+}
+
+func printCharactersArray(name: String, characters: [Character]) {
+    print("\n\(name)")
+    for item in characters {
+        item.description()
     }
 }

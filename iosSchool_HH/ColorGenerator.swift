@@ -122,42 +122,4 @@ class Palette<CustomColor> {
     init(colors: [CustomColor]) {
         self.colors = colors
     }
-
-}
-
-func myFunc() {
-    // reduce
-    let arrayInt = [1, 2, 3, 4, 5, 6, 7, 8]
-    let resultReduce = arrayInt.reduce(1) { partialResult, element in
-        partialResult * element
-    }
-
-    // filter
-    let result = arrayInt.filter { elem in
-        return elem % 2 == 0
-    }
-    let result1 = arrayInt.filter { $0 % 2 == 0 }
-
-    // map
-    let array = [0.1, 0.2, 0.5, 1]
-    let generators = array.map { ColorGenerator(alpha: $0)}
-
-    let generators1 = array.map { alpha -> ColorGeneratorProtocol? in //важно!
-        guard alpha < 1 else {
-            return nil
-        }
-        return ColorGenerator(alpha: alpha)
-    }
-
-    let generators2: [ColorGeneratorProtocol?] = array.map {
-        guard $0 < 1 else {
-            return nil
-        }
-        return ColorGenerator(alpha: $0)
-    }
-
-    // compactMap
-    let test2 = generators2.compactMap { $0 }
-    let test3 = generators2.compactMap { $0?.alpha }
-    let test4 = generators2.map { $0?.alpha }
 }
