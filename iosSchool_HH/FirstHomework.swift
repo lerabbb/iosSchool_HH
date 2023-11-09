@@ -118,7 +118,7 @@ class CharacterGenerator: CharacterGeneratorProtocol {
     }
 
     func generateNameOne(completion: (String) -> Void) {
-        completion(getRandomString())
+        completion(getRandomValue(values: strings))
     }
 
     func generateNameTwo(completion: () -> (String)) {
@@ -138,7 +138,7 @@ class CharacterGenerator: CharacterGeneratorProtocol {
             guard let self else {
                 return str + "-"
             }
-            return str + self.getRandomString()
+            return str + self.getRandomValue(values: strings)
         }
     }
 }
