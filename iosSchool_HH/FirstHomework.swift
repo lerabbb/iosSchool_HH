@@ -116,6 +116,31 @@ class CharacterGenerator: CharacterGeneratorProtocol {
     func getRandomValue(values: [String]) -> String {
         values.randomElement() ?? "xxx"
     }
+
+    func generateNameOne(completion: (String) -> Void) {
+        completion(getRandomString())
+    }
+
+    func generateNameTwo(completion: () -> (String)) {
+        print(completion())
+    }
+
+    func generateNameTree() -> (String) -> Void {
+        {
+            print("generateNameThree result: \($0)")
+        }
+    }
+
+    func generateNameFour() -> (() -> String) {
+        { [weak self] in
+            let str: String = "generateNameFour result: "
+
+            guard let self else {
+                return str + "-"
+            }
+            return str + self.getRandomString()
+        }
+    }
 }
 
 func printCharactersArray(name: String, characters: [Character]) {
