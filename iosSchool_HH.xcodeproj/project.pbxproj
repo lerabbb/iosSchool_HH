@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
-		3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */; };
+		3F071B902AE919BB0002BEB5 /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307422AE11A8F00D9223D /* ViewController.swift */; };
@@ -23,11 +23,17 @@
 		3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */; };
 		3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */; };
 		3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */; };
+		3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */; };
+		3FF07BE82AFCDD9A008E4D37 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */; };
+		3FF07BEA2AFCDE56008E4D37 /* RegistrationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */; };
+		3FF07BEC2AFCDE9A008E4D37 /* RegistrationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BEB2AFCDE9A008E4D37 /* RegistrationDataProvider.swift */; };
+		3FF07BEE2AFCDF19008E4D37 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BED2AFCDF19008E4D37 /* RegistrationAssembly.swift */; };
+		3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BEF2AFCDFEC008E4D37 /* RegistrationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
-		3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHomework.swift; sourceTree = "<group>"; };
+		3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,12 @@
 		3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
 		3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
 		3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewData.swift; sourceTree = "<group>"; };
+		3FF07BEB2AFCDE9A008E4D37 /* RegistrationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataProvider.swift; sourceTree = "<group>"; };
+		3FF07BED2AFCDF19008E4D37 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		3FF07BEF2AFCDFEC008E4D37 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +97,7 @@
 				3F23074C2AE11A9100D9223D /* Info.plist */,
 				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
-				3F071B8F2AE919BB0002BEB5 /* FirstHomework.swift */,
+				3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */,
 				3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */,
 				3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */,
 			);
@@ -95,6 +107,7 @@
 		3FF07BD62AF9222A008E4D37 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07BE42AFCDCDF008E4D37 /* Registration */,
 				3FF07BD72AF92253008E4D37 /* Auth */,
 			);
 			path = Modules;
@@ -111,6 +124,19 @@
 				3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		3FF07BE42AFCDCDF008E4D37 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */,
+				3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */,
+				3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */,
+				3FF07BEB2AFCDE9A008E4D37 /* RegistrationDataProvider.swift */,
+				3FF07BED2AFCDF19008E4D37 /* RegistrationAssembly.swift */,
+				3FF07BEF2AFCDFEC008E4D37 /* RegistrationCoordinator.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,17 +234,23 @@
 				3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */,
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
+				3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
 				3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */,
+				3FF07BEE2AFCDF19008E4D37 /* RegistrationAssembly.swift in Sources */,
 				3FF07BD52AF91942008E4D37 /* AppCoordinator.swift in Sources */,
 				3FF07BD32AF91852008E4D37 /* BaseCoordinator.swift in Sources */,
+				3FF07BE82AFCDD9A008E4D37 /* RegistrationView.swift in Sources */,
 				3FF07BDD2AF9242C008E4D37 /* AuthViewData.swift in Sources */,
 				3FF07BDB2AF9230B008E4D37 /* AuthView.swift in Sources */,
 				3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */,
-				3F071B902AE919BB0002BEB5 /* FirstHomework.swift in Sources */,
+				3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */,
+				3F071B902AE919BB0002BEB5 /* CharacterGenerator.swift in Sources */,
 				3FF07BD92AF922E2008E4D37 /* AuthViewController.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
+				3FF07BEC2AFCDE9A008E4D37 /* RegistrationDataProvider.swift in Sources */,
 				3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */,
+				3FF07BEA2AFCDE56008E4D37 /* RegistrationViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
