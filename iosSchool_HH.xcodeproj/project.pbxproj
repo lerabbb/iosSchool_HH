@@ -23,6 +23,12 @@
 		3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */; };
 		3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */; };
 		3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */; };
+		3FF07BF32AFD12A6008E4D37 /* SplashDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BF22AFD12A6008E4D37 /* SplashDataProvider.swift */; };
+		3FF07BF52AFD12F0008E4D37 /* SplashViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BF42AFD12F0008E4D37 /* SplashViewData.swift */; };
+		3FF07BF72AFD1324008E4D37 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BF62AFD1324008E4D37 /* SplashView.swift */; };
+		3FF07BFB2AFD137E008E4D37 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BFA2AFD137E008E4D37 /* SplashViewController.swift */; };
+		3FF07BFD2AFD140F008E4D37 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BFC2AFD140F008E4D37 /* SplashCoordinator.swift */; };
+		3FF07BFF2AFD1461008E4D37 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BFE2AFD1461008E4D37 /* SplashAssembly.swift */; };
 		3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */; };
 		3FF07BE82AFCDD9A008E4D37 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */; };
 		3FF07BEA2AFCDE56008E4D37 /* RegistrationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */; };
@@ -50,6 +56,12 @@
 		3FF07BDE2AF92450008E4D37 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
 		3FF07BE02AF92499008E4D37 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
 		3FF07BE22AF92615008E4D37 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		3FF07BF22AFD12A6008E4D37 /* SplashDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataProvider.swift; sourceTree = "<group>"; };
+		3FF07BF42AFD12F0008E4D37 /* SplashViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewData.swift; sourceTree = "<group>"; };
+		3FF07BF62AFD1324008E4D37 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		3FF07BFA2AFD137E008E4D37 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3FF07BFC2AFD140F008E4D37 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		3FF07BFE2AFD1461008E4D37 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
 		3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewData.swift; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 		3FF07BD62AF9222A008E4D37 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07BF12AFD1283008E4D37 /* Splash */,
 				3FF07BE42AFCDCDF008E4D37 /* Registration */,
 				3FF07BD72AF92253008E4D37 /* Auth */,
 			);
@@ -126,6 +139,17 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		3FF07BF12AFD1283008E4D37 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07BF22AFD12A6008E4D37 /* SplashDataProvider.swift */,
+				3FF07BF42AFD12F0008E4D37 /* SplashViewData.swift */,
+				3FF07BF62AFD1324008E4D37 /* SplashView.swift */,
+				3FF07BFA2AFD137E008E4D37 /* SplashViewController.swift */,
+				3FF07BFC2AFD140F008E4D37 /* SplashCoordinator.swift */,
+				3FF07BFE2AFD1461008E4D37 /* SplashAssembly.swift */,
+			);
+			path = Splash;
 		3FF07BE42AFCDCDF008E4D37 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF07BF52AFD12F0008E4D37 /* SplashViewData.swift in Sources */,
 				3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */,
+				3FF07BF72AFD1324008E4D37 /* SplashView.swift in Sources */,
+				3FF07BFB2AFD137E008E4D37 /* SplashViewController.swift in Sources */,
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
+				3FF07BFD2AFD140F008E4D37 /* SplashCoordinator.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
@@ -250,6 +278,8 @@
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
 				3FF07BEC2AFCDE9A008E4D37 /* RegistrationDataProvider.swift in Sources */,
 				3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */,
+				3FF07BFF2AFD1461008E4D37 /* SplashAssembly.swift in Sources */,
+				3FF07BF32AFD12A6008E4D37 /* SplashDataProvider.swift in Sources */,
 				3FF07BEA2AFCDE56008E4D37 /* RegistrationViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
