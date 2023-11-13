@@ -35,6 +35,13 @@
 		3FF07C0A2B02205E008E4D37 /* SplashDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C092B02205E008E4D37 /* SplashDataProvider.swift */; };
 		3FF07C0D2B022080008E4D37 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C0C2B022080008E4D37 /* SplashAssembly.swift */; };
 		3FF07C0F2B022099008E4D37 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C0E2B022099008E4D37 /* SplashCoordinator.swift */; };
+		3FF07C122B025150008E4D37 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C112B025150008E4D37 /* Location.swift */; };
+		3FF07C142B0259B4008E4D37 /* LocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C132B0259B4008E4D37 /* LocationsList.swift */; };
+		3FF07C162B025A3A008E4D37 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C152B025A3A008E4D37 /* TokenResponse.swift */; };
+		3FF07C192B025AF3008E4D37 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C182B025AF3008E4D37 /* ApiClient.swift */; };
+		3FF07C1B2B025B5F008E4D37 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1A2B025B5F008E4D37 /* NetworkConstants.swift */; };
+		3FF07C1D2B025CB4008E4D37 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1C2B025CB4008E4D37 /* ApiError.swift */; };
+		3FF07C1F2B02601B008E4D37 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,13 @@
 		3FF07C092B02205E008E4D37 /* SplashDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataProvider.swift; sourceTree = "<group>"; };
 		3FF07C0C2B022080008E4D37 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
 		3FF07C0E2B022099008E4D37 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		3FF07C112B025150008E4D37 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3FF07C132B0259B4008E4D37 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsList.swift; sourceTree = "<group>"; };
+		3FF07C152B025A3A008E4D37 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		3FF07C182B025AF3008E4D37 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		3FF07C1A2B025B5F008E4D37 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		3FF07C1C2B025CB4008E4D37 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,8 @@
 		3F23073D2AE11A8F00D9223D /* iosSchool_HH */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07C172B025AE1008E4D37 /* ApiClient */,
+				3FF07C102B025119008E4D37 /* Models */,
 				3FF07BD62AF9222A008E4D37 /* Modules */,
 				3F23073E2AE11A8F00D9223D /* AppDelegate.swift */,
 				3F2307402AE11A8F00D9223D /* SceneDelegate.swift */,
@@ -163,6 +179,27 @@
 				3FF07C0E2B022099008E4D37 /* SplashCoordinator.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		3FF07C102B025119008E4D37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07C112B025150008E4D37 /* Location.swift */,
+				3FF07C132B0259B4008E4D37 /* LocationsList.swift */,
+				3FF07C152B025A3A008E4D37 /* TokenResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FF07C172B025AE1008E4D37 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07C182B025AF3008E4D37 /* ApiClient.swift */,
+				3FF07C1A2B025B5F008E4D37 /* NetworkConstants.swift */,
+				3FF07C1C2B025CB4008E4D37 /* ApiError.swift */,
+				3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +297,8 @@
 				3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */,
 				3FF07C0F2B022099008E4D37 /* SplashCoordinator.swift in Sources */,
 				3FF07C062B022037008E4D37 /* SplashView.swift in Sources */,
+				3FF07C1F2B02601B008E4D37 /* AuthApiClient.swift in Sources */,
+				3FF07C1B2B025B5F008E4D37 /* NetworkConstants.swift in Sources */,
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */,
@@ -269,20 +308,25 @@
 				3FF07C0D2B022080008E4D37 /* SplashAssembly.swift in Sources */,
 				3FF07BD52AF91942008E4D37 /* AppCoordinator.swift in Sources */,
 				3FF07BD32AF91852008E4D37 /* BaseCoordinator.swift in Sources */,
+				3FF07C1D2B025CB4008E4D37 /* ApiError.swift in Sources */,
 				3FF07BE82AFCDD9A008E4D37 /* RegistrationView.swift in Sources */,
+				3FF07C162B025A3A008E4D37 /* TokenResponse.swift in Sources */,
 				3FF07C0A2B02205E008E4D37 /* SplashDataProvider.swift in Sources */,
 				3FF07BDD2AF9242C008E4D37 /* AuthViewData.swift in Sources */,
 				3FF07BDB2AF9230B008E4D37 /* AuthView.swift in Sources */,
 				3FF07C042B022028008E4D37 /* SplashViewController.swift in Sources */,
 				3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */,
+				3FF07C122B025150008E4D37 /* Location.swift in Sources */,
 				3FF07C082B02204F008E4D37 /* SplashViewData.swift in Sources */,
 				3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */,
 				3F071B902AE919BB0002BEB5 /* CharacterGenerator.swift in Sources */,
+				3FF07C142B0259B4008E4D37 /* LocationsList.swift in Sources */,
 				3FF07BD92AF922E2008E4D37 /* AuthViewController.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
 				3FF07BEC2AFCDE9A008E4D37 /* RegistrationDataProvider.swift in Sources */,
 				3FF07BE12AF92499008E4D37 /* AuthAssembly.swift in Sources */,
 				3FF07BEA2AFCDE56008E4D37 /* RegistrationViewData.swift in Sources */,
+				3FF07C192B025AF3008E4D37 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
