@@ -26,5 +26,13 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .blue
+        register()
+    }
+
+    func register() {
+        dataProvider.registration(username: "lera", password: "12345678") { token, error in
+            print(token ?? "no token. registration failed")
+            print(error?.rawValue ?? "no error. registration success")
+        }
     }
 }

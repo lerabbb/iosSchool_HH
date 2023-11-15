@@ -7,62 +7,6 @@
 
 import Foundation
 
-class Character {
-    enum Gender: String, CaseIterable {
-        case female = "Female"
-        case male = "Male"
-        case genderless = "Genderless"
-        case unknown = "unknown"
-
-        static func random() -> Gender {
-            return allCases.randomElement() ?? unknown
-        }
-    }
-
-    enum Status: String, CaseIterable {
-        case alive = "Alive"
-        case dead = "Dead"
-        case unknown = "unknown"
-
-        static func random() -> Status {
-            return allCases.randomElement() ?? unknown
-        }
-    }
-
-    let id: Int
-    let name: String
-    let species: String
-    let image: String
-    let url: String
-    var episode: [String]
-    let gender: Gender
-    let status: Status
-
-    init(
-        id: Int,
-        name: String,
-        species: String,
-        image: String,
-        url: String,
-        episode: [String],
-        gender: Gender,
-        status: Status
-    ) {
-        self.id = id
-        self.name = name
-        self.species = species
-        self.image = image
-        self.url = url
-        self.episode = episode
-        self.gender = gender
-        self.status = status
-    }
-
-    func description() {
-        print("name: \(name), gender: \(gender.rawValue), episode: \(episode)")
-    }
-}
-
 protocol CharacterGeneratorProtocol {
     var names: [String] { get }
     var strings: [String] { get }
