@@ -44,6 +44,7 @@
 		3FF07C1F2B02601B008E4D37 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */; };
 		3FF07C572B064095008E4D37 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C562B064095008E4D37 /* BaseViewController.swift */; };
 		3FF07C5A2B0642E8008E4D37 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */; };
+		3FF07C5F2B07B573008E4D37 /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF07C5E2B07B573008E4D37 /* RegistrationViewImp.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
 		3FF07C562B064095008E4D37 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
+		3FF07C5E2B07B573008E4D37 /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		3FF07BE42AFCDCDF008E4D37 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07C5D2B07B55A008E4D37 /* Subviews */,
 				3FF07BE52AFCDD11008E4D37 /* RegistrationViewController.swift */,
 				3FF07BE72AFCDD9A008E4D37 /* RegistrationView.swift */,
 				3FF07BE92AFCDE56008E4D37 /* RegistrationViewData.swift */,
@@ -220,6 +223,14 @@
 			isa = PBXGroup;
 			children = (
 				3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		3FF07C5D2B07B55A008E4D37 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07C5E2B07B573008E4D37 /* RegistrationViewImp.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF07C5F2B07B573008E4D37 /* RegistrationViewImp.xib in Resources */,
 				3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */,
 				3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */,
 				3FF07C5A2B0642E8008E4D37 /* AuthViewImp.xib in Resources */,
