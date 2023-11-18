@@ -38,26 +38,6 @@ class Character: Decodable {
     let gender: Gender
     let status: Status
 
-    init(
-        id: Int,
-        name: String,
-        species: String,
-        image: String,
-        url: String,
-        episode: [String],
-        gender: Gender,
-        status: Status
-    ) {
-        self.id = id
-        self.name = name
-        self.species = species
-        self.image = image
-        self.url = url
-        self.episode = episode
-        self.gender = gender
-        self.status = status
-    }
-
     func description() {
         print("character id: \(id), name: \(name), species: \(species), " +
               "image: \(image), url: \(url), " +
