@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
-		3F071B902AE919BB0002BEB5 /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307432AE11A8F00D9223D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307422AE11A8F00D9223D /* ViewController.swift */; };
@@ -63,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
-		3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				3F23074C2AE11A9100D9223D /* Info.plist */,
 				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
-				3F071B8F2AE919BB0002BEB5 /* CharacterGenerator.swift */,
 				3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */,
 				3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */,
 			);
@@ -401,7 +398,6 @@
 				3FF07C522B053C07008E4D37 /* LocationAssembly.swift in Sources */,
 				3FF07C4E2B053BAB008E4D37 /* LocationDataProvider.swift in Sources */,
 				3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */,
-				3F071B902AE919BB0002BEB5 /* CharacterGenerator.swift in Sources */,
 				3FF07C4C2B053B8A008E4D37 /* LocationView.swift in Sources */,
 				3FF07C3B2B0532AF008E4D37 /* CharacterViewController.swift in Sources */,
 				3FF07C142B0259B4008E4D37 /* LocationsList.swift in Sources */,

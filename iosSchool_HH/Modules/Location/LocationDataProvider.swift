@@ -8,9 +8,7 @@
 import Foundation
 
 protocol LocationDataProvider {
-    func findAllLocations(
-        onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void
-    )
+    func findAllLocations(onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void)
 }
 
 class LocationsDataProviderImp: LocationDataProvider {
@@ -21,9 +19,7 @@ class LocationsDataProviderImp: LocationDataProvider {
         self.apiClient = apiClient
     }
 
-    func findAllLocations(
-        onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void
-    ) {
+    func findAllLocations(onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void) {
         apiClient.findAllLocations(onRequestCompleted: onRequestCompleted)
     }
 }

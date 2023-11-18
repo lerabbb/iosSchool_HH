@@ -30,7 +30,7 @@ class CharacterViewController: UIViewController {
 
     func findSingleCharacter() {
         dataProvider.findSingleCharacter(
-            url: "https://rickandmortyapi.com/api/character/71"
+            url: NetworkConstants.URLStrings.characterURL + "/71"
         ) { character, error in
             print(character?.description() ?? "no character")
             print(error?.rawValue ?? "no error")
