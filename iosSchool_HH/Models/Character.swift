@@ -39,8 +39,10 @@ class Character: Decodable {
     let status: Status
 
     func description() {
-        print("character id: \(id), name: \(name), species: \(species), " +
-              "image: \(image), url: \(url), " +
-              "gender: \(gender.rawValue), status: \(status), episode: \(episode)")
+        print(
+            "character id: \(id), name: \(name), species: \(species), " +
+            "image: \(image), url: \(url), " +
+            "gender: \(gender.rawValue), status: \(status), episode: \(episode)"
+        )
     }
 }
