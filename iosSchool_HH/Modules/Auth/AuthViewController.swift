@@ -29,7 +29,7 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     }
 
     func login() {
-        dataProvider.auth(login: "lera", password: "1111") { token, error in
+        dataProvider.auth(login: "lera", password: "12345678") { token, error in
             print(token ?? "нет токена")
             print(error?.rawValue ?? "нет ошибки")
         }
