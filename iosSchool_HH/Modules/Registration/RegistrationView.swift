@@ -23,23 +23,35 @@ class RegistrationViewImp: UIView, RegistrationView {
 
     func setView() {
         backgroundImageView.image = UIImage(named: "registration-background")
-        styleUserAvatar(userImg: userImageView)
+        backgroundImageView.contentMode = .scaleAspectFill
+        styleUserAvatar(userImgView: userImageView)
 
-        styleTextField(textField: loginTextField)
-        styleTextField(textField: passwordTextField)
-        styleTextField(textField: repeatPswdTextField)
+        styleTextField(textField: loginTextField, placeholderText: "Введите логин")
+        styleTextField(textField: passwordTextField, placeholderText: "Введите пароль")
+        styleTextField(textField: repeatPswdTextField, placeholderText: "Повторите пароль")
 
         styleButton(button: registrationButton)
         styleButton(button: backButton)
     }
 
-    private func styleTextField(textField: UITextField) {
+    // MARK: - Private
+
+    private func styleTextField(textField: UITextField, placeholderText: String?) {
         textField.clipsToBounds = true
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        textField.borderStyle = .none
+        textField.layer.backgroundColor = UIColor(.white).cgColor
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        textField.textColor = UIColor(red: 0.318, green: 0.306, blue: 0.306, alpha: 1)
+        textField.layer.borderColor = UIColor(.black).cgColor
+
+        let spacerView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 10))
+        textField.leftViewMode = .always
+        textField.leftView = spacerView
+
+        textField.attributedPlaceholder = NSAttributedString(
+            string: placeholderText ?? "",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder-color") ?? UIColor(.black)]
+        )
 
         textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         textField.layer.shadowOpacity = 1
@@ -48,9 +60,9 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     private func styleButton(button: UIButton) {
-        button.layer.backgroundColor = UIColor(red: 0.329, green: 0.506, blue: 0.706, alpha: 1).cgColor
+        button.layer.backgroundColor = UIColor(named: "button-color")?.cgColor
         button.layer.cornerRadius = 10
-        button.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.titleLabel?.textColor = UIColor(.white)
 
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         button.layer.shadowOpacity = 1
@@ -58,13 +70,23 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
-    private func styleUserAvatar(userImg: UIImageView) {
-        userImageView.image = UIImage(named: "user-profile")
-        userImageView.clipsToBounds = true
+    private func styleUserAvatar(userImgView: UIImageView) {
+        userImgView.clipsToBounds = false
+        userImgView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        userImgView.layer.shadowOpacity = 1
+        userImgView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        userImgView.layer.shadowRadius = 8
+        userImgView.layer.shadowPath = UIBezierPath(
+            roundedRect: userImgView.bounds,
+            cornerRadius: userImgView.frame.width/2
+        ).cgPath
 
-        userImg.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        userImg.layer.shadowOpacity = 1
-        userImg.layer.shadowRadius = 8
-        userImg.layer.shadowOffset = CGSize(width: 0, height: 5)
+        let userImage = UIImageView(frame: userImgView.bounds)
+        userImage.image = UIImage(named: "user-profile")
+        userImage.clipsToBounds = true
+        userImage.layer.cornerRadius = userImgView.frame.width/2
+
+        userImgView.addSubview(userImage)
     }
+
 }
