@@ -11,9 +11,11 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
     private let dataProvider: RegistrationDataProvider
+    private var onRegistrationSuccess: (() -> Void)?
 
-    init(dataProvider: RegistrationDataProvider) {
+    init(dataProvider: RegistrationDataProvider, onRegistrationSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
+        self.onRegistrationSuccess = onRegistrationSuccess
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,5 +36,9 @@ class RegistrationViewController: UIViewController {
             print(token ?? "no token. registration failed")
             print(error?.rawValue ?? "no error. registration success")
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

@@ -40,6 +40,8 @@
 		3FF07C1B2B025B5F008E4D37 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1A2B025B5F008E4D37 /* NetworkConstants.swift */; };
 		3FF07C1D2B025CB4008E4D37 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1C2B025CB4008E4D37 /* ApiError.swift */; };
 		3FF07C1F2B02601B008E4D37 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */; };
+		3FF07C572B064095008E4D37 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C562B064095008E4D37 /* BaseViewController.swift */; };
+		3FF07C5A2B0642E8008E4D37 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */; };
 		3FF07C232B05077D008E4D37 /* RegistrationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C222B05077D008E4D37 /* RegistrationApiClient.swift */; };
 		3FF07C252B051492008E4D37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C242B051492008E4D37 /* User.swift */; };
 		3FF07C272B052382008E4D37 /* LocationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF07C262B052382008E4D37 /* LocationApiClient.swift */; };
@@ -95,6 +97,8 @@
 		3FF07C1A2B025B5F008E4D37 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		3FF07C1C2B025CB4008E4D37 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		3FF07C1E2B02601B008E4D37 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
+		3FF07C562B064095008E4D37 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
 		3FF07C222B05077D008E4D37 /* RegistrationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationApiClient.swift; sourceTree = "<group>"; };
 		3FF07C242B051492008E4D37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3FF07C262B052382008E4D37 /* LocationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationApiClient.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		3F23073D2AE11A8F00D9223D /* iosSchool_HH */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07C552B064069008E4D37 /* Common */,
 				3FF07C172B025AE1008E4D37 /* ApiClient */,
 				3FF07C102B025119008E4D37 /* Models */,
 				3FF07BD62AF9222A008E4D37 /* Modules */,
@@ -175,6 +180,7 @@
 		3FF07BD72AF92253008E4D37 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				3FF07C582B0642C9008E4D37 /* Subviews */,
 				3FF07BD82AF922E2008E4D37 /* AuthViewController.swift */,
 				3FF07BDA2AF9230B008E4D37 /* AuthView.swift */,
 				3FF07BDC2AF9242C008E4D37 /* AuthViewData.swift */,
@@ -235,6 +241,23 @@
 				3FF07C372B05304D008E4D37 /* CharacterApiClient.swift */,
 			);
 			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		3FF07C552B064069008E4D37 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07BD22AF91852008E4D37 /* BaseCoordinator.swift */,
+				3FF07C562B064095008E4D37 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3FF07C582B0642C9008E4D37 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				3FF07C592B0642E8008E4D37 /* AuthViewImp.xib */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		3FF07C392B05329A008E4D37 /* Character */ = {
@@ -324,6 +347,7 @@
 			files = (
 				3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */,
 				3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */,
+				3FF07C5A2B0642E8008E4D37 /* AuthViewImp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +389,7 @@
 				3FF07C1B2B025B5F008E4D37 /* NetworkConstants.swift in Sources */,
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
+				3FF07C572B064095008E4D37 /* BaseViewController.swift in Sources */,
 				3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */,
 				3FF07C452B053323008E4D37 /* CharacterCoordinator.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
