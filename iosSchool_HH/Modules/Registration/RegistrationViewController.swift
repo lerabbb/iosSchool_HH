@@ -29,6 +29,13 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
         rootView.setView()
     }
 
+    func register() {
+        dataProvider.registration(user: User(username: "lera", password: "12345678")) { token, error in
+            print(token ?? "no token. registration failed")
+            print(error?.rawValue ?? "no error. registration success")
+        }
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
