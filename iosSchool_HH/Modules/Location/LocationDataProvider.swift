@@ -23,4 +23,3 @@ class LocationsDataProviderImp: LocationDataProvider {
         apiClient.findAllLocations(onRequestCompleted: onRequestCompleted)
     }
 }
-
