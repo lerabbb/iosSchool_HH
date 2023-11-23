@@ -91,12 +91,12 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="CeK-Bj-DsJ" secondAttribute="trailing" constant="16" id="2iX-yK-xY8"/>
                                 <constraint firstAttribute="trailing" secondItem="FNv-JV-XcM" secondAttribute="trailing" constant="32" id="3XX-ei-TIq"/>
                                 <constraint firstItem="FNv-JV-XcM" firstAttribute="leading" secondItem="mQO-uc-2l2" secondAttribute="leading" constant="32" id="6sS-eK-o7F"/>
-                                <constraint firstItem="5Z1-5G-WxT" firstAttribute="top" secondItem="mQO-uc-2l2" secondAttribute="top" constant="227" id="COm-HJ-2c0"/>
+                                <constraint firstItem="5Z1-5G-WxT" firstAttribute="top" secondItem="mQO-uc-2l2" secondAttribute="top" priority="600" constant="227" id="COm-HJ-2c0"/>
                                 <constraint firstAttribute="bottom" secondItem="CeK-Bj-DsJ" secondAttribute="bottom" constant="46" id="ES3-jW-h0q"/>
                                 <constraint firstItem="FNv-JV-XcM" firstAttribute="top" secondItem="poh-WP-TmF" secondAttribute="bottom" constant="36" id="QH9-x5-Vlb"/>
                                 <constraint firstItem="poh-WP-TmF" firstAttribute="top" secondItem="5Z1-5G-WxT" secondAttribute="bottom" constant="30" id="ZFW-TA-qrw"/>
@@ -104,7 +104,7 @@
                                 <constraint firstAttribute="trailing" secondItem="5Z1-5G-WxT" secondAttribute="trailing" constant="16" id="gec-Rv-ief"/>
                                 <constraint firstItem="5Z1-5G-WxT" firstAttribute="leading" secondItem="mQO-uc-2l2" secondAttribute="leading" constant="16" id="jQi-0E-ULB"/>
                                 <constraint firstItem="poh-WP-TmF" firstAttribute="centerX" secondItem="mQO-uc-2l2" secondAttribute="centerX" id="rIX-cs-lh8"/>
-                                <constraint firstItem="CeK-Bj-DsJ" firstAttribute="top" secondItem="FNv-JV-XcM" secondAttribute="bottom" priority="600" constant="127" id="tcM-CL-G2L"/>
+                                <constraint firstItem="CeK-Bj-DsJ" firstAttribute="top" secondItem="FNv-JV-XcM" secondAttribute="bottom" priority="650" constant="127" id="tcM-CL-G2L"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -27,7 +27,6 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     func setView() {
-
         isUserInteractionEnabled = true
         let recognizer = UITapGestureRecognizer(
             target: self,
@@ -59,13 +58,14 @@ class RegistrationViewImp: UIView, RegistrationView {
             object: nil
         )
 
-
         backgroundImageView.image = UIImage(named: "registration-background")
         backgroundImageView.contentMode = .scaleAspectFill
-        styleUserAvatar(userImgView: userImageView)
+        userImageView.image = UIImage(named: "user-profile")
+
         styleTextField(textField: loginTextField, placeholderText: "Введите логин")
         styleTextField(textField: passwordTextField, placeholderText: "Введите пароль")
         styleTextField(textField: repeatPswdTextField, placeholderText: "Повторите пароль")
+
         styleButton(button: registrationButton)
         styleButton(button: backButton)
     }
@@ -79,7 +79,10 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     @objc
-    private func registrationDidTap() {}
+    private func registrationDidTap() {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
 
     @objc
     private func backDidTap() {}
@@ -135,24 +138,5 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
-    }
-
-    private func styleUserAvatar(userImgView: UIImageView) {
-        userImgView.clipsToBounds = false
-        userImgView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        userImgView.layer.shadowOpacity = 1
-        userImgView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        userImgView.layer.shadowRadius = 8
-        userImgView.layer.shadowPath = UIBezierPath(
-            roundedRect: userImgView.bounds,
-            cornerRadius: userImgView.frame.width/2
-        ).cgPath
-
-        let userImage = UIImageView(frame: userImgView.bounds)
-        userImage.image = UIImage(named: "user-profile")
-        userImage.clipsToBounds = true
-        userImage.layer.cornerRadius = userImgView.frame.width/2
-
-        userImgView.addSubview(userImage)
     }
 }

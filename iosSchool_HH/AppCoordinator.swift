@@ -25,7 +25,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func authBootstrap() {
-        let coordinator = assembly.authCoordinator()
+        let coordinator = assembly.registrationCoordinator(onRegistrationSuccess: nil)
         setRoot(viewController: coordinator.make())
     }
 
