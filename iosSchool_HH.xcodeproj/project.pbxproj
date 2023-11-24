@@ -13,6 +13,7 @@
 		3F096CC52B0F8943002892CA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CC42B0F8943002892CA /* BaseNavigationController.swift */; };
 		3F096CC82B0F9245002892CA /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 3F096CC72B0F9245002892CA /* SPIndicator */; };
 		3F096CCB2B0F9531002892CA /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3F096CCA2B0F9531002892CA /* PKHUD */; };
+		3F096CD02B10DD40002892CA /* SplashViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F096CCF2B10DD40002892CA /* SplashViewImp.xib */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307472AE11A9100D9223D /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		3F096CBF2B0F8841002892CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3F096CC22B0F88A4002892CA /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		3F096CC42B0F8943002892CA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		3F096CCF2B10DD40002892CA /* SplashViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewImp.xib; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 				3F096CC22B0F88A4002892CA /* RootTab.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		3F096CCC2B10DCDE002892CA /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				3F096CCF2B10DD40002892CA /* SplashViewImp.xib */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		3F2307322AE11A8F00D9223D = {
@@ -227,6 +237,7 @@
 		3FF07C022B022013008E4D37 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				3F096CCC2B10DCDE002892CA /* Subviews */,
 				3FF07C032B022028008E4D37 /* SplashViewController.swift */,
 				3FF07C052B022037008E4D37 /* SplashView.swift */,
 				3FF07C072B02204F008E4D37 /* SplashViewData.swift */,
@@ -384,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F096CD02B10DD40002892CA /* SplashViewImp.xib in Resources */,
 				3FF07C5F2B07B573008E4D37 /* RegistrationViewImp.xib in Resources */,
 				3F23074B2AE11A9100D9223D /* LaunchScreen.storyboard in Resources */,
 				3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */,

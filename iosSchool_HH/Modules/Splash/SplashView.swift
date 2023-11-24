@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 
 protocol SplashView: UIView {
+    func setView()
 }
 
-class SplashViewImp: UIView, SplashView {}
+class SplashViewImp: UIView, SplashView {
+    @IBOutlet private var splashImageView: UIImageView!
+
+    func setView() {
+        splashImageView.image = UIImage(named: "splash-image")
+    }
+}
