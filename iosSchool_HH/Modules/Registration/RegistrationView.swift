@@ -102,8 +102,8 @@ class RegistrationViewImp: UIView, RegistrationView {
 
     @objc
     private func keyboardWillHide() {
-        self.scrollView.contentInset = .zero
-        self.scrollView.verticalScrollIndicatorInsets = .zero
+        scrollView.contentInset = .zero
+        scrollView.verticalScrollIndicatorInsets = .zero
     }
 
     private func styleTextField(textField: UITextField, placeholderText: String?) {

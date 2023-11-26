@@ -73,6 +73,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Jj9-L0-VGk"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Готово">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -83,6 +84,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Q7D-bX-LmD"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Назад">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
