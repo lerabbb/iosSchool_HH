@@ -13,6 +13,7 @@ protocol RegistrationView: UIView {
 
 class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var backgroundImageView: UIImageView!
+    @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var userImageView: UIImageView!
     @IBOutlet private var loginTextField: UITextField!
@@ -21,7 +22,42 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var registrationButton: UIButton!
     @IBOutlet private var backButton: UIButton!
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     func setView() {
+        isUserInteractionEnabled = true
+        let recognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(viewDidTap)
+        )
+        addGestureRecognizer(recognizer)
+
+        registrationButton.addTarget(
+            self,
+            action: #selector(registrationDidTap),
+            for: .touchUpInside
+        )
+        backButton.addTarget(
+            self,
+            action: #selector(backDidTap),
+            for: .touchUpInside
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+
         backgroundImageView.image = UIImage(named: "registration-background")
         backgroundImageView.contentMode = .scaleAspectFill
         userImageView.image = UIImage(named: "user-profile")
@@ -35,6 +71,40 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     // MARK: - Private
+
+    @objc
+    private func viewDidTap() {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+
+    @objc
+    private func registrationDidTap() {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+
+    @objc
+    private func backDidTap() {}
+
+    @objc
+    private func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else {
+            return
+        }
+        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            return
+        }
+        let keyboardHeight = keyboardFrame.cgRectValue.height
+        scrollView.contentInset.bottom = keyboardHeight
+        scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
+    }
+
+    @objc
+    private func keyboardWillHide() {
+        scrollView.contentInset = .zero
+        scrollView.verticalScrollIndicatorInsets = .zero
+    }
 
     private func styleTextField(textField: UITextField, placeholderText: String?) {
         textField.clipsToBounds = true
