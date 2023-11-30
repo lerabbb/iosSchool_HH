@@ -20,7 +20,19 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tabBar.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.shadowRadius = 8
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 5)
         tabBar.backgroundColor = UIColor(named: "iceberg-color")
         tabBar.isTranslucent = false
+
+        guard let items = tabBar.items else {
+            return
+        }
+        for item in items {
+            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        }
     }
 }

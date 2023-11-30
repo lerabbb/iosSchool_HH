@@ -46,15 +46,26 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
     }
 
     private func setupBar() {
-            title = "Выбор планеты"
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
-                .font: UIFont.systemFont(ofSize: 18)
-            ]
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(
-//                barButtonSystemItem: .refresh,
-//                target: self,
-//                action: #selector(reload)
-//            )
-        }
+        title = "Выбор планеты"
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
+            .font: UIFont.systemFont(ofSize: 18)
+        ]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "refresh"),
+            style: .plain,
+            target: self,
+            action: #selector(reload)
+        )
+
+        let tabBarItemImage = UIImage(named: "planet")
+        tabBarItem = UITabBarItem(
+            title: title,
+            image: tabBarItemImage,
+            selectedImage: tabBarItemImage
+        )
+    }
+
+    @objc
+    private func reload() {}
 }
