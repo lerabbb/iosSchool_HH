@@ -19,6 +19,9 @@ class LocationCell: UITableViewCell {
     }
 
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
+    @IBOutlet private weak var populationLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

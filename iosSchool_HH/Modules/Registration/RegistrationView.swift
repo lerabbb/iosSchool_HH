@@ -8,7 +8,14 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    var delegate: RegistrationViewDelegate? { get set }
+
     func setView()
+}
+
+protocol RegistrationViewDelegate: AnyObject {
+    func registrationButtonDidTap(login: String, password: String)
+    func backButtonDidTap()
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
@@ -22,6 +29,8 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var registrationButton: UIButton!
     @IBOutlet private var backButton: UIButton!
 
+    weak var delegate: RegistrationViewDelegate?
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -34,16 +43,16 @@ class RegistrationViewImp: UIView, RegistrationView {
         )
         addGestureRecognizer(recognizer)
 
-        registrationButton.addTarget(
-            self,
-            action: #selector(registrationDidTap),
-            for: .touchUpInside
-        )
-        backButton.addTarget(
-            self,
-            action: #selector(backDidTap),
-            for: .touchUpInside
-        )
+//        registrationButton.addTarget(
+//            self,
+//            action: #selector(registrationDidTap),
+//            for: .touchUpInside
+//        )
+//        backButton.addTarget(
+//            self,
+//            action: #selector(backDidTap),
+//            for: .touchUpInside
+//        )
 
         NotificationCenter.default.addObserver(
             self,
@@ -78,14 +87,22 @@ class RegistrationViewImp: UIView, RegistrationView {
         passwordTextField.resignFirstResponder()
     }
 
-    @objc
+    @IBAction
     private func registrationDidTap() {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        repeatPswdTextField.resignFirstResponder()
+
+        delegate?.registrationButtonDidTap(
+            login: loginTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
-    @objc
-    private func backDidTap() {}
+    @IBAction
+    private func backDidTap() {
+        delegate?.backButtonDidTap()
+    }
 
     @objc
     private func keyboardWillShow(notification: Notification) {

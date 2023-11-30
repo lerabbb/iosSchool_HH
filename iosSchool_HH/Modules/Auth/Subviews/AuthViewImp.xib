@@ -82,6 +82,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Bfd-FL-8lT"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                             <connections>
@@ -93,6 +94,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="psr-Ct-e9F"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться"/>
                                         </button>
@@ -114,6 +116,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="8cC-el-3jO" firstAttribute="width" secondItem="xGa-fx-LEI" secondAttribute="width" id="319-Vk-tJo"/>
                         <constraint firstItem="8cC-el-3jO" firstAttribute="height" secondItem="xGa-fx-LEI" secondAttribute="height" id="ZRA-YC-5Ob"/>
@@ -127,7 +130,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="HBs-JK-KmA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4YP-kT-68w"/>
                 <constraint firstItem="HBs-JK-KmA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="MD3-CG-i7C"/>
