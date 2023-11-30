@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F01A8FD2B18CC6C0062BB7A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01A8FC2B18CC6C0062BB7A /* ImageService.swift */; };
 		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
+		3F096CBE2B0D23ED002892CA /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */; };
 		3F096CC02B0F8841002892CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CBF2B0F8841002892CA /* TabBarController.swift */; };
 		3F096CC32B0F88A4002892CA /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CC22B0F88A4002892CA /* RootTab.swift */; };
 		3F096CC52B0F8943002892CA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CC42B0F8943002892CA /* BaseNavigationController.swift */; };
 		3F096CC82B0F9245002892CA /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 3F096CC72B0F9245002892CA /* SPIndicator */; };
 		3F096CCB2B0F9531002892CA /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3F096CCA2B0F9531002892CA /* PKHUD */; };
 		3F096CD02B10DD40002892CA /* SplashViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F096CCF2B10DD40002892CA /* SplashViewImp.xib */; };
-		3F096CBE2B0D23ED002892CA /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */; };
 		3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23073E2AE11A8F00D9223D /* AppDelegate.swift */; };
 		3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2307402AE11A8F00D9223D /* SceneDelegate.swift */; };
 		3F2307482AE11A9100D9223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2307472AE11A9100D9223D /* Assets.xcassets */; };
@@ -73,12 +74,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F01A8FC2B18CC6C0062BB7A /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		3F096CBF2B0F8841002892CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3F096CC22B0F88A4002892CA /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		3F096CC42B0F8943002892CA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		3F096CCF2B10DD40002892CA /* SplashViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewImp.xib; sourceTree = "<group>"; };
-		3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		3F23073B2AE11A8F00D9223D /* iosSchool_HH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_HH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23073E2AE11A8F00D9223D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2307402AE11A8F00D9223D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F01A8FB2B18CC590062BB7A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F01A8FC2B18CC6C0062BB7A /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3F096CC12B0F8892002892CA /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		3F23073D2AE11A8F00D9223D /* iosSchool_HH */ = {
 			isa = PBXGroup;
 			children = (
+				3F01A8FB2B18CC590062BB7A /* Services */,
 				3F5D91CA2B14D79200492A6B /* Extensions */,
 				3FF07C552B064069008E4D37 /* Common */,
 				3FF07C172B025AE1008E4D37 /* ApiClient */,
@@ -501,6 +512,7 @@
 				3FF07BDF2AF92450008E4D37 /* AuthDataProvider.swift in Sources */,
 				3FF07C122B025150008E4D37 /* Location.swift in Sources */,
 				3FF07C082B02204F008E4D37 /* SplashViewData.swift in Sources */,
+				3F01A8FD2B18CC6C0062BB7A /* ImageService.swift in Sources */,
 				3FF07C522B053C07008E4D37 /* LocationAssembly.swift in Sources */,
 				3FF07C4E2B053BAB008E4D37 /* LocationDataProvider.swift in Sources */,
 				3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */,
