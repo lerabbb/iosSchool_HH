@@ -43,7 +43,6 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
 extension RegistrationViewController: RegistrationViewDelegate {
 
     func registrationButtonDidTap(login: String, password: String) {
-        self.onRegistrationSuccess?()
         HUD.show(.progress)
         dataProvider.registration(user: User(username: login, password: password)) { [weak self] token, error in
             DispatchQueue.main.async {

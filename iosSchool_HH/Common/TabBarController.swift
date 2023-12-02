@@ -26,13 +26,6 @@ class TabBarController: UITabBarController {
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 5)
         tabBar.backgroundColor = UIColor(named: "iceberg-color")
         tabBar.isTranslucent = false
-
-        guard let items = tabBar.items else {
-            return
-        }
-        for item in items {
-            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
-            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
-        }
+        tabBar.tintColor = .black
     }
 }

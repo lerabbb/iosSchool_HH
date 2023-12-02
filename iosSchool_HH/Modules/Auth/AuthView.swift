@@ -65,8 +65,10 @@ class AuthViewImp: UIView, AuthView {
         )
 
         imageView.image = UIImage(named: "auth-background")
+
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.backgroundColor = UIColor(red: 196, green: 196, blue: 196, alpha: 1).cgColor
+        imageView.layer.backgroundColor = UIColor(named: "grey-color")?.cgColor
+
         styleLabelView(view: labelView)
         styleTextField(textField: loginTextField, placeholderText: "Логин")
         styleTextField(textField: passwordTextField, placeholderText: "Пароль")
@@ -118,14 +120,13 @@ class AuthViewImp: UIView, AuthView {
     }
 
     private func styleLabelView(view: UIView) {
-//        view.layer.masksToBounds = true
-        view.layer.backgroundColor = UIColor(red: 196, green: 196, blue: 196, alpha: 0.65).cgColor
+        view.layer.backgroundColor = UIColor(named: "clear-grey-color")?.cgColor
         view.layer.cornerRadius = 10
 
-        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        view.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         view.layer.shadowOpacity = 1
         view.layer.shadowRadius = 10
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.shadowOffset = CGSize(width: 0, height: 8)
     }
 
     private func styleTextField(textField: UITextField, placeholderText: String?) {
@@ -145,7 +146,7 @@ class AuthViewImp: UIView, AuthView {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder-color") ?? UIColor(.black)]
         )
 
-        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         textField.layer.shadowOpacity = 1
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -156,7 +157,7 @@ class AuthViewImp: UIView, AuthView {
         button.layer.cornerRadius = 10
         button.titleLabel?.textColor = UIColor(.white)
 
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)

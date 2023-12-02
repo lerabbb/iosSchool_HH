@@ -39,8 +39,6 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
                 print(error?.rawValue ?? "no error")
                 return
             }
-            print(list)
-
             self?.rootView.update(data: LocationViewData(list: list))
         }
     }
@@ -67,5 +65,8 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
     }
 
     @objc
-    private func reload() {}
+    private func reload() {
+        print("update table data")
+        findAllLocations()
+    }
 }

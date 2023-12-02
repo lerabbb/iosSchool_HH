@@ -43,17 +43,6 @@ class RegistrationViewImp: UIView, RegistrationView {
         )
         addGestureRecognizer(recognizer)
 
-//        registrationButton.addTarget(
-//            self,
-//            action: #selector(registrationDidTap),
-//            for: .touchUpInside
-//        )
-//        backButton.addTarget(
-//            self,
-//            action: #selector(backDidTap),
-//            for: .touchUpInside
-//        )
-
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -140,7 +129,7 @@ class RegistrationViewImp: UIView, RegistrationView {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder-color") ?? UIColor(.black)]
         )
 
-        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         textField.layer.shadowOpacity = 1
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -151,7 +140,7 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.cornerRadius = 10
         button.titleLabel?.textColor = UIColor(.white)
 
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
