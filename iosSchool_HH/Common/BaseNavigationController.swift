@@ -15,11 +15,6 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
         navigationBar.prefersLargeTitles = false
         navigationBar.isTranslucent = false
         navigationBar.backgroundColor = UIColor(named: "iceberg-color")
-        navigationBar.layer.masksToBounds = false
-        navigationBar.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
-        navigationBar.layer.shadowOpacity = 1
-        navigationBar.layer.shadowRadius = 8
-        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5)
         view.backgroundColor = UIColor(named: "iceberg-color")
     }
 
