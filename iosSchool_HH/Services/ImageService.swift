@@ -22,5 +22,22 @@ class ImageServiceImp: ImageService {
         self.apiClient = apiClient
     }
 
-    func getImage(url: String, completion: @escaping (UIImage?) -> Void) {}
+    func getImage(url: String, completion: @escaping (UIImage?) -> Void) {
+        if let item = imageDict[url] {
+            completion(item)
+            return
+        }
+        DispatchQueue.global().async {
+            self.apiClient.requestImageData(url: url) { [weak self] data in
+                guard let data else {
+                    return
+                }
+                self?.updateQueue.async {
+                    let image = UIImage(data: data)
+                    self?.imageDict[url] = image
+                    completion(image)
+                }
+            }
+        }
+    }
 }
