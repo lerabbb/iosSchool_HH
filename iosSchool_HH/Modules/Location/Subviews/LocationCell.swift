@@ -23,18 +23,12 @@ class LocationCell: UITableViewCell {
     @IBOutlet private weak var populationLabel: UILabel!
     @IBOutlet private weak var arrowImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-
-    }
-
     // MARK: - Private
 
     private func update(data: LocationCellData) {
         nameLabel.text = data.name
         typeLabel.text = data.type
-        populationLabel.text = "Население: \(data.population)"
+        populationLabel.text = data.population
 
         arrowImageView.image = UIImage(named: "arrow")
         arrowImageView.contentMode = .scaleAspectFill

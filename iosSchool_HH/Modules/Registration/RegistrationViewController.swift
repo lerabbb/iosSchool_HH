@@ -32,10 +32,6 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
         rootView.setView()
         rootView.delegate = self
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
 }
 
 // MARK: - RegistrationViewDelegate

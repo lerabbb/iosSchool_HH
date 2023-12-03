@@ -65,7 +65,6 @@ class AuthViewImp: UIView, AuthView {
         )
 
         imageView.image = UIImage(named: "auth-background")
-
         imageView.contentMode = .scaleAspectFill
         imageView.layer.backgroundColor = UIColor(named: "grey-color")?.cgColor
 
