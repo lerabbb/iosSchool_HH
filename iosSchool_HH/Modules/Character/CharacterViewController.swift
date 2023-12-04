@@ -35,7 +35,7 @@ class CharacterViewController: UIViewController {
         charactersUrlList.forEach { url in
             requestCharacter(url: url) { [weak self] character in
                 print(character.name)
-                self?.imageService.getImage(url: url, completion: { image in
+                self?.imageService.getImage(url: character.image, completion: { image in
                     print(image?.size ?? 0)
                 })
             }

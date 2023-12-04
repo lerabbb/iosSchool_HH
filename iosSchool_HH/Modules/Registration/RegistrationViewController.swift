@@ -35,8 +35,4 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
             print(error?.rawValue ?? "no error. registration success")
         }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
 }

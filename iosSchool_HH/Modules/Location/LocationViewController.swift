@@ -39,8 +39,6 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
                 print(error?.rawValue ?? "no error")
                 return
             }
-            print(list)
-
             self?.rootView.update(data: LocationViewData(list: list))
         }
     }
