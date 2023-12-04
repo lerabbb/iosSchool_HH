@@ -20,12 +20,6 @@ class LocationCell: UITableViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-
-    }
-
     // MARK: - Private
 
     private func update(data: LocationCellData) {
