@@ -13,8 +13,6 @@ protocol ImageService {
 
 class ImageServiceImp: ImageService {
 
-    private let maxSize = 50
-
     private var imageDict: [String: UIImage] = [:]
 
     private let apiClient: ApiClient
@@ -29,12 +27,13 @@ class ImageServiceImp: ImageService {
             completion(item)
             return
         }
-        if imageDict.count > maxSize {
+        if imageDict.count > 50 {
             imageDict.removeAll()
         }
         DispatchQueue.global().async {
             self.apiClient.requestImageData(url: url) { [weak self] data in
                 guard let data else {
+                    completion(nil)
                     return
                 }
                 self?.updateQueue.async {
