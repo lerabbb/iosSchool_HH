@@ -19,7 +19,8 @@ enum RootTab: Int {
         )
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
-            .font: UIFont.systemFont(ofSize: 10)
+            .font: UIFont.systemFont(ofSize: 10),
+            .foregroundColor: UIColor.black
         ]
         tabBarItem.standardAppearance = appearance
         return tabBarItem
