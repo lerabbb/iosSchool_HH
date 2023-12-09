@@ -12,10 +12,12 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
 
     private let dataProvider: RegistrationDataProvider
     private var onRegistrationSuccess: (() -> Void)?
+    private let storageManager: StorageManager
 
-    init(dataProvider: RegistrationDataProvider, onRegistrationSuccess: (() -> Void)?) {
+    init(dataProvider: RegistrationDataProvider, storageManager: StorageManager, onRegistrationSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
         self.onRegistrationSuccess = onRegistrationSuccess
+        self.storageManager = storageManager
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,5 +36,12 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
             print(token ?? "no token. registration failed")
             print(error?.rawValue ?? "no error. registration success")
         }
+//        HUD.show(.progress)
+//        dataProvider.register(...) { [weak self] token, error in
+//            ...
+//            self.storageManager.saveToken(token: token)
+//            self.onOpenLogin?()
+//        }
+        // after success registration go to locations, (save token)
     }
 }
