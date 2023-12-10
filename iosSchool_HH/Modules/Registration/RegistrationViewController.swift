@@ -5,10 +5,13 @@
 //  Created by student on 09.11.2023.
 //
 
-import Foundation
 import UIKit
+import PKHUD
+import SPIndicator
 
 class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
+
+    var onOpenAuth: (() -> Void)?
 
     private let dataProvider: RegistrationDataProvider
     private var onRegistrationSuccess: (() -> Void)?
@@ -29,19 +32,33 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
     override func viewDidLoad() {
         super.viewDidLoad()
         rootView.setView()
+        rootView.delegate = self
+    }
+}
+
+// MARK: - RegistrationViewDelegate
+
+extension RegistrationViewController: RegistrationViewDelegate {
+
+    func registrationButtonDidTap(login: String, password: String) {
+        HUD.show(.progress)
+        dataProvider.registration(user: User(username: login, password: password)) { [weak self] token, error in
+            DispatchQueue.main.async {
+                HUD.hide()
+            }
+            guard let self, let token else {
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
+                }
+                return
+            }
+            self.storageManager.saveToken(token: token)
+            self.storageManager.saveLastAuthDate()
+            self.onRegistrationSuccess?()
+        }
     }
 
-    func register() {
-        dataProvider.registration(user: User(username: "lera", password: "12345678")) { token, error in
-            print(token ?? "no token. registration failed")
-            print(error?.rawValue ?? "no error. registration success")
-        }
-//        HUD.show(.progress)
-//        dataProvider.register(...) { [weak self] token, error in
-//            ...
-//            self.storageManager.saveToken(token: token)
-//            self.onOpenLogin?()
-//        }
-        // after success registration go to locations, (save token)
+    func backButtonDidTap() {
+        dismiss(animated: true)
     }
 }

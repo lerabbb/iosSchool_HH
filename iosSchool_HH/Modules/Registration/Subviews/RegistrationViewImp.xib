@@ -78,6 +78,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Готово">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="registrationDidTap" destination="iN0-l3-epB" eventType="touchUpInside" id="cPG-x3-abf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-DL-qQL">
                                             <rect key="frame" x="0.0" y="52" width="398" height="40"/>
@@ -89,6 +92,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Назад">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="backDidTap" destination="iN0-l3-epB" eventType="touchUpInside" id="14I-XL-cvx"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
