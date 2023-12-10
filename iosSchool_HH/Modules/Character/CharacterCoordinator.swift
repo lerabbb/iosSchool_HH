@@ -9,9 +9,11 @@ import UIKit
 
 class CharacterCoordinator: BaseCoordinator<CharacterCoordinator.Context> {
 
-    struct Context {}
+    struct Context {
+        let data: LocationCellData
+    }
 
     override func make() -> UIViewController? {
-        assembly.characterVC()
+        assembly.characterVC(data: context.data)
     }
 }
