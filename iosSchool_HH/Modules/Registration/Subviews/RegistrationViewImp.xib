@@ -78,6 +78,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Готово">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="registrationDidTap" destination="iN0-l3-epB" eventType="touchUpInside" id="ngy-6w-GXb"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-DL-qQL">
                                             <rect key="frame" x="0.0" y="52" width="398" height="40"/>
@@ -89,6 +92,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Назад">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="backDidTap" destination="iN0-l3-epB" eventType="touchUpInside" id="vDI-Ce-j6H"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -135,7 +141,7 @@
                 <constraint firstAttribute="trailing" secondItem="dZ6-aM-fEF" secondAttribute="trailing" id="oJH-84-RbX"/>
             </constraints>
             <connections>
-                <outlet property="backButton" destination="6Kd-DL-qQL" id="sdT-Cd-Orz"/>
+                <outlet property="backButton" destination="6Kd-DL-qQL" id="IAh-be-REf"/>
                 <outlet property="backgroundImageView" destination="zaq-m5-uuL" id="LaX-8v-5X7"/>
                 <outlet property="loginTextField" destination="8Fz-2d-yYa" id="ZPP-cD-SCY"/>
                 <outlet property="passwordTextField" destination="pUG-xa-YY7" id="JLC-Wc-D1W"/>

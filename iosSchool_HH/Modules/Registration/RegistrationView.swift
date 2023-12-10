@@ -8,7 +8,14 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    var delegate: RegistrationViewDelegate? { get set }
+
     func setView()
+}
+
+protocol RegistrationViewDelegate: AnyObject {
+    func registrationButtonDidTap(login: String, password: String)
+    func backButtonDidTap()
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
@@ -22,6 +29,8 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var registrationButton: UIButton!
     @IBOutlet private var backButton: UIButton!
 
+    weak var delegate: RegistrationViewDelegate?
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -33,17 +42,6 @@ class RegistrationViewImp: UIView, RegistrationView {
             action: #selector(viewDidTap)
         )
         addGestureRecognizer(recognizer)
-
-        registrationButton.addTarget(
-            self,
-            action: #selector(registrationDidTap),
-            for: .touchUpInside
-        )
-        backButton.addTarget(
-            self,
-            action: #selector(backDidTap),
-            for: .touchUpInside
-        )
 
         NotificationCenter.default.addObserver(
             self,
@@ -78,14 +76,22 @@ class RegistrationViewImp: UIView, RegistrationView {
         passwordTextField.resignFirstResponder()
     }
 
-    @objc
+    @IBAction
     private func registrationDidTap() {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        repeatPswdTextField.resignFirstResponder()
+
+        delegate?.registrationButtonDidTap(
+            login: loginTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
-    @objc
-    private func backDidTap() {}
+    @IBAction
+    private func backDidTap() {
+        delegate?.backButtonDidTap()
+    }
 
     @objc
     private func keyboardWillShow(notification: Notification) {
@@ -123,7 +129,7 @@ class RegistrationViewImp: UIView, RegistrationView {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder-color") ?? UIColor(.black)]
         )
 
-        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         textField.layer.shadowOpacity = 1
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -134,7 +140,7 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.cornerRadius = 10
         button.titleLabel?.textColor = UIColor(.white)
 
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)

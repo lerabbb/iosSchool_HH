@@ -11,10 +11,12 @@ struct LocationCellData {
     let name: String
     let type: String
     let residents: [String]
+    let population: String
 
     init(location: Location) {
         name = location.name
         type = location.type
         residents = location.residents
+        population = "Население: \(location.residents.count)"
     }
 }
