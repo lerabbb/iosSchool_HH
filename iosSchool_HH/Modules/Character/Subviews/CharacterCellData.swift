@@ -14,6 +14,7 @@ struct CharacterCellData: CoreCellInputData {
     let isLoading: Bool
     let url: String
     let name: String?
+    let info: String?
     let imageUrl: String?
     let image: UIImage?
 
@@ -22,6 +23,7 @@ struct CharacterCellData: CoreCellInputData {
         self.selectClosure = selectClosure
         self.isLoading = isLoading
         self.name = character.name
+        self.info = "\(character.gender) \(character.species)"
         self.imageUrl = character.image
         self.image = image
     }
@@ -30,6 +32,7 @@ struct CharacterCellData: CoreCellInputData {
         self.url = url
         isLoading = true
         name = nil
+        info = nil
         imageUrl = nil
         image = nil
     }

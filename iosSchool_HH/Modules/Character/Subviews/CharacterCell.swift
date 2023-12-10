@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import PKHUD
 
 class CharacterCell: UICollectionViewCell, CoreCellView {
 
+    @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var infoLabel: UILabel!
 
     static func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(
@@ -35,7 +38,21 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
     }
 
     func update(with inputData: CharacterCellData) {
-        nameLabel.text = inputData.name
+        self.layer.cornerRadius = 15
+        self.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 8
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+
+        if inputData.isLoading {
+            HUD.show(.progress)
+        } else {
+            HUD.hide()
+        }
+        nameLabel.text = inputData.name ?? ""
+        infoLabel.text = inputData.info ?? ""
+        imageView.image = inputData.image ?? UIImage(named: "placeholder")
+        imageView.contentMode = .scaleAspectFit
     }
 
 }
