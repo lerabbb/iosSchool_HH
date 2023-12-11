@@ -37,6 +37,7 @@ class LocationViewImp: UIView, LocationView {
         tableView.register(nib, forCellReuseIdentifier: LocationCell.className)
         tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
         tableView.backgroundColor = .clear
+        tableView.separatorColor = .clear
         tableView.allowsSelectionDuringEditing = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -44,7 +45,7 @@ class LocationViewImp: UIView, LocationView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
         tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }

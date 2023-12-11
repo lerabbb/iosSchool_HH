@@ -19,10 +19,19 @@ class LocationCell: UITableViewCell {
     }
 
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
+    @IBOutlet private weak var populationLabel: UILabel!
+    @IBOutlet private weak var arrowImageView: UIImageView!
 
     // MARK: - Private
 
     private func update(data: LocationCellData) {
         nameLabel.text = data.name
+        typeLabel.text = data.type
+        populationLabel.text = data.population
+
+        arrowImageView.image = UIImage(named: "arrow")
+        arrowImageView.contentMode = .scaleAspectFill
+        backgroundColor = .clear
     }
 }

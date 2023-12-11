@@ -7,4 +7,6 @@
 
 import Foundation
 
-struct CharacterViewData {}
+struct CharacterViewData {
+    let cells: [CharacterCellData]
+}

@@ -17,6 +17,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HBs-JK-KmA">
                     <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFc-Y8-p0F">
                     <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
@@ -45,7 +46,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="0Br-0S-lgj" secondAttribute="trailing" constant="63" id="Kud-0I-fNT"/>
                                         <constraint firstItem="0Br-0S-lgj" firstAttribute="leading" secondItem="wZ7-ec-E7p" secondAttribute="leading" constant="63" id="bNz-I2-Cfp"/>
@@ -82,6 +83,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Bfd-FL-8lT"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                             <connections>
@@ -93,6 +95,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="psr-Ct-e9F"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться"/>
                                         </button>
@@ -114,6 +117,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="8cC-el-3jO" firstAttribute="width" secondItem="xGa-fx-LEI" secondAttribute="width" id="319-Vk-tJo"/>
                         <constraint firstItem="8cC-el-3jO" firstAttribute="height" secondItem="xGa-fx-LEI" secondAttribute="height" id="ZRA-YC-5Ob"/>
