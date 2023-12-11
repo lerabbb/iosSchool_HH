@@ -46,21 +46,16 @@ extension RegistrationViewController: RegistrationViewDelegate {
             DispatchQueue.main.async {
                 HUD.hide()
             }
-            guard let self, token != nil else {
+            guard let self, let token else {
                 DispatchQueue.main.async {
                     SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
                 }
                 return
             }
+            self.storageManager.saveToken(token: token)
+            self.storageManager.saveLastAuthDate()
             self.onRegistrationSuccess?()
         }
-//        HUD.show(.progress)
-//        dataProvider.register(...) { [weak self] token, error in
-//            ...
-//            self.storageManager.saveToken(token: token)
-//            self.onOpenLogin?()
-//        }
-        // after success registration go to locations, (save token)
     }
 
     func backButtonDidTap() {
