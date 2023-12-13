@@ -9,6 +9,8 @@ import UIKit
 
 class CharacterViewController<View: CharacterView>: BaseViewController<View> {
 
+    var selectCharacter: ((CoreCellInputData) -> Void)?
+
     private var characters: [Character] = []
 
     private let dataProvider: CharacterDataProvider
@@ -46,7 +48,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                         character: character,
                         isLoading: true,
                         image: nil,
-                        selectClosure: nil
+                        selectClosure: self.selectCharacter
                     ))
                 }
                 self.imageService.getImage(url: character.image, completion: { image in

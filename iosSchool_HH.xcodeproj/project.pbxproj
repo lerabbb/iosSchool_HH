@@ -39,6 +39,13 @@
 		3F4916F52B25CC89008022D4 /* CharacterDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916EC2B25CC89008022D4 /* CharacterDataProvider.swift */; };
 		3F4916F62B25CC89008022D4 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916ED2B25CC89008022D4 /* CharacterCoordinator.swift */; };
 		3F4916F72B25CC89008022D4 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916EE2B25CC89008022D4 /* CharacterViewController.swift */; };
+		3F4916FA2B2A1DD5008022D4 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916F92B2A1DD5008022D4 /* PersonViewController.swift */; };
+		3F4916FC2B2A1DE5008022D4 /* PersonViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916FB2B2A1DE5008022D4 /* PersonViewData.swift */; };
+		3F4916FE2B2A1DF3008022D4 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916FD2B2A1DF3008022D4 /* PersonView.swift */; };
+		3F4917002B2A1E00008022D4 /* PersonDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4916FF2B2A1E00008022D4 /* PersonDataProvider.swift */; };
+		3F4917022B2A1E0F008022D4 /* PersonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4917012B2A1E0F008022D4 /* PersonAssembly.swift */; };
+		3F4917042B2A1E20008022D4 /* PersonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4917032B2A1E20008022D4 /* PersonCoordinator.swift */; };
+		3F4917062B2A2030008022D4 /* PersonApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4917052B2A2030008022D4 /* PersonApiClient.swift */; };
 		3F5D91C62B14D1FE00492A6B /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D91C42B14D1FE00492A6B /* LocationCell.swift */; };
 		3F5D91C72B14D1FE00492A6B /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D91C52B14D1FE00492A6B /* LocationCell.xib */; };
 		3F5D91C92B14D4D800492A6B /* LocationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D91C82B14D4D800492A6B /* LocationCellData.swift */; };
@@ -118,6 +125,13 @@
 		3F4916EC2B25CC89008022D4 /* CharacterDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDataProvider.swift; sourceTree = "<group>"; };
 		3F4916ED2B25CC89008022D4 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
 		3F4916EE2B25CC89008022D4 /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		3F4916F92B2A1DD5008022D4 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		3F4916FB2B2A1DE5008022D4 /* PersonViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewData.swift; sourceTree = "<group>"; };
+		3F4916FD2B2A1DF3008022D4 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		3F4916FF2B2A1E00008022D4 /* PersonDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataProvider.swift; sourceTree = "<group>"; };
+		3F4917012B2A1E0F008022D4 /* PersonAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAssembly.swift; sourceTree = "<group>"; };
+		3F4917032B2A1E20008022D4 /* PersonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoordinator.swift; sourceTree = "<group>"; };
+		3F4917052B2A2030008022D4 /* PersonApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApiClient.swift; sourceTree = "<group>"; };
 		3F5D91C42B14D1FE00492A6B /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		3F5D91C52B14D1FE00492A6B /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		3F5D91C82B14D4D800492A6B /* LocationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellData.swift; sourceTree = "<group>"; };
@@ -201,7 +215,6 @@
 			children = (
 				3F23073D2AE11A8F00D9223D /* iosSchool_HH */,
 				3F23073C2AE11A8F00D9223D /* Products */,
-				3F4916E32B25CC63008022D4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +295,19 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		3F4916F82B2A1DAE008022D4 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				3F4916F92B2A1DD5008022D4 /* PersonViewController.swift */,
+				3F4916FB2B2A1DE5008022D4 /* PersonViewData.swift */,
+				3F4916FD2B2A1DF3008022D4 /* PersonView.swift */,
+				3F4916FF2B2A1E00008022D4 /* PersonDataProvider.swift */,
+				3F4917012B2A1E0F008022D4 /* PersonAssembly.swift */,
+				3F4917032B2A1E20008022D4 /* PersonCoordinator.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 		3F5D91C32B14D1C200492A6B /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +330,7 @@
 		3FF07BD62AF9222A008E4D37 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3F4916F82B2A1DAE008022D4 /* Person */,
 				3F4916E42B25CC89008022D4 /* Character */,
 				3FF07C482B053B50008E4D37 /* Location */,
 				3FF07C022B022013008E4D37 /* Splash */,
@@ -377,6 +404,7 @@
 				3FF07C222B05077D008E4D37 /* RegistrationApiClient.swift */,
 				3FF07C262B052382008E4D37 /* LocationApiClient.swift */,
 				3FF07C372B05304D008E4D37 /* CharacterApiClient.swift */,
+				3F4917052B2A2030008022D4 /* PersonApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -529,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4917062B2A2030008022D4 /* PersonApiClient.swift in Sources */,
 				3F096CC52B0F8943002892CA /* BaseNavigationController.swift in Sources */,
 				3FF07C0F2B022099008E4D37 /* SplashCoordinator.swift in Sources */,
 				3FF07C062B022037008E4D37 /* SplashView.swift in Sources */,
@@ -548,15 +577,19 @@
 				3F4916812B21FB4A008022D4 /* CoreSection.swift in Sources */,
 				3F4916F62B25CC89008022D4 /* CharacterCoordinator.swift in Sources */,
 				3F4916EF2B25CC89008022D4 /* CharacterViewData.swift in Sources */,
+				3F4916FA2B2A1DD5008022D4 /* PersonViewController.swift in Sources */,
 				3F23073F2AE11A8F00D9223D /* AppDelegate.swift in Sources */,
 				3FF07BE32AF92615008E4D37 /* AuthCoordinator.swift in Sources */,
 				3F5D91CC2B14D7AF00492A6B /* NSObject+ClassName.swift in Sources */,
+				3F4917042B2A1E20008022D4 /* PersonCoordinator.swift in Sources */,
 				3FF07C542B053C28008E4D37 /* LocationCoordinator.swift in Sources */,
 				3F4916F12B25CC89008022D4 /* CharacterView.swift in Sources */,
+				3F4916FC2B2A1DE5008022D4 /* PersonViewData.swift in Sources */,
 				3FF07C502B053BC9008E4D37 /* LocationViewData.swift in Sources */,
 				3FF07C4A2B053B65008E4D37 /* LocationViewController.swift in Sources */,
 				3F49167C2B21FB2A008022D4 /* CoreReusableView.swift in Sources */,
 				3FF07C362B052F04008E4D37 /* Character.swift in Sources */,
+				3F4917022B2A1E0F008022D4 /* PersonAssembly.swift in Sources */,
 				3FF07BEE2AFCDF19008E4D37 /* RegistrationAssembly.swift in Sources */,
 				3F49167F2B21FB2A008022D4 /* CoreCellView.swift in Sources */,
 				3FF07C0D2B022080008E4D37 /* SplashAssembly.swift in Sources */,
@@ -582,10 +615,12 @@
 				3F4916F52B25CC89008022D4 /* CharacterDataProvider.swift in Sources */,
 				3FF07BE62AFCDD11008E4D37 /* RegistrationViewController.swift in Sources */,
 				3FF07C4C2B053B8A008E4D37 /* LocationView.swift in Sources */,
+				3F4916FE2B2A1DF3008022D4 /* PersonView.swift in Sources */,
 				3F4916F72B25CC89008022D4 /* CharacterViewController.swift in Sources */,
 				3F49167B2B21FB2A008022D4 /* CoreNibReusable.swift in Sources */,
 				3FF07C142B0259B4008E4D37 /* LocationsList.swift in Sources */,
 				3F096CC02B0F8841002892CA /* TabBarController.swift in Sources */,
+				3F4917002B2A1E00008022D4 /* PersonDataProvider.swift in Sources */,
 				3FF07BD92AF922E2008E4D37 /* AuthViewController.swift in Sources */,
 				3F2307412AE11A8F00D9223D /* SceneDelegate.swift in Sources */,
 				3F5D91C62B14D1FE00492A6B /* LocationCell.swift in Sources */,
