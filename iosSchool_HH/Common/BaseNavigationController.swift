@@ -14,8 +14,12 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
         super.viewDidLoad()
         navigationBar.prefersLargeTitles = false
         navigationBar.isTranslucent = false
-        navigationBar.backgroundColor = UIColor(named: "iceberg-color")
-        view.backgroundColor = UIColor(named: "iceberg-color")
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.backgroundColor = UIColor(named: "iceberg-color")
+        navigationBar.standardAppearance = navigationBarAppearance
+        navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        navigationBar.compactAppearance = navigationBarAppearance
     }
 
     override var childForStatusBarStyle: UIViewController? {

@@ -13,6 +13,7 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var indicator: UIActivityIndicatorView!
 
     static func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(
@@ -37,22 +38,25 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
         return section
     }
 
-    func update(with inputData: CharacterCellData) {
+    override func awakeFromNib() {
         self.layer.cornerRadius = 15
         self.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         self.layer.shadowOpacity = 1
         self.layer.shadowRadius = 8
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        indicator.hidesWhenStopped = true
+        imageView.contentMode = .scaleAspectFit
+    }
 
+    func update(with inputData: CharacterCellData) {
         if inputData.isLoading {
-            HUD.show(.progress)
+            indicator.startAnimating()
         } else {
-            HUD.hide()
+            indicator.stopAnimating()
         }
         nameLabel.text = inputData.name ?? ""
         infoLabel.text = inputData.info ?? ""
         imageView.image = inputData.image ?? UIImage(named: "placeholder")
-        imageView.contentMode = .scaleAspectFit
     }
 
 }

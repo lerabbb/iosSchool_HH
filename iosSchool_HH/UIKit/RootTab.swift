@@ -18,11 +18,14 @@ enum RootTab: Int {
             tag: self.rawValue
         )
         let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(named: "iceberg-color")
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
             .font: UIFont.systemFont(ofSize: 10),
             .foregroundColor: UIColor.black
         ]
         tabBarItem.standardAppearance = appearance
+        tabBarItem.scrollEdgeAppearance = appearance
         return tabBarItem
     }
 
