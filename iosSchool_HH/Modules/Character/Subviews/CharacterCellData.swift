@@ -16,14 +16,16 @@ struct CharacterCellData: CoreCellInputData {
     let name: String?
     let imageUrl: String?
     let image: UIImage?
+    let episodes: [String]
 
     init(character: Character, isLoading: Bool, image: UIImage?, selectClosure: ((CoreCellInputData) -> Void)?) {
-        url = character.url
-        self.selectClosure = selectClosure
+        self.url = character.url
         self.isLoading = isLoading
         self.name = character.name
         self.imageUrl = character.image
         self.image = image
+        self.selectClosure = selectClosure
+        self.episodes = character.episode
     }
 
     init(url: String) {
@@ -32,5 +34,6 @@ struct CharacterCellData: CoreCellInputData {
         name = nil
         imageUrl = nil
         image = nil
+        self.episodes = []
     }
 }

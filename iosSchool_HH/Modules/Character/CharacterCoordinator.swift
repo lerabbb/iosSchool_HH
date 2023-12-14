@@ -15,8 +15,8 @@ class CharacterCoordinator: BaseCoordinator<CharacterCoordinator.Context> {
 
     override func make() -> UIViewController? {
         let characterVC = assembly.characterVC(data: context.data)
-        characterVC.selectCharacter = { [weak characterVC] cellData in
-            let coordinator = self.assembly.personCoordinator()
+        characterVC.selectCharacter = { [weak characterVC] characterData in
+            let coordinator = self.assembly.personCoordinator(data: characterData)
             guard let personVC = coordinator.make() else {
                 return
             }

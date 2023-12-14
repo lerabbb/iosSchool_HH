@@ -8,23 +8,23 @@
 import Foundation
 
 protocol PersonAssembly {
-    func personVC() -> PersonViewController <PersonViewImp>
+    func personVC(data: CharacterCellData) -> PersonViewController <PersonViewImp>
     func personDataProvider() -> PersonDataProvider
-    func personCoordinator() -> PersonCoordinator
+    func personCoordinator(data: CharacterCellData) -> PersonCoordinator
 }
 
 extension Assembly: PersonAssembly {
 
-    func personVC() -> PersonViewController <PersonViewImp> {
-        .init(dataProvider: personDataProvider())
+    func personVC(data: CharacterCellData) -> PersonViewController <PersonViewImp> {
+        .init(dataProvider: personDataProvider(), data: data)
     }
 
     func personDataProvider() -> PersonDataProvider {
         PersonDataProviderImp(apiClient: apiClient)
     }
 
-    func personCoordinator() -> PersonCoordinator {
-        PersonCoordinator(assembly: self, context: .init())
+    func personCoordinator(data: CharacterCellData) -> PersonCoordinator {
+        PersonCoordinator(assembly: self, context: .init(data: data))
     }
 }
 

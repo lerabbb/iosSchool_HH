@@ -9,10 +9,11 @@ import UIKit
 
 class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
     private let dataProvider: PersonDataProvider
+    private let episodes: [String]
 
-    init(dataProvider: PersonDataProvider) {
+    init(dataProvider: PersonDataProvider, data: CharacterCellData) {
         self.dataProvider = dataProvider
-
+        self.episodes = data.episodes
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,5 +24,6 @@ class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
     override func viewDidLoad() {
         super.viewDidLoad()
         rootView.setView()
+        rootView.update(data: .init(image: nil, episodeUrls: episodes))
     }
 }

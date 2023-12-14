@@ -9,9 +9,11 @@ import UIKit
 
 class PersonCoordinator: BaseCoordinator<PersonCoordinator.Context> {
 
-    struct Context {}
+    struct Context {
+        let data: CharacterCellData
+    }
 
     override func make() -> UIViewController? {
-        assembly.personVC()
+        assembly.personVC(data: context.data)
     }
 }
