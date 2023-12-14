@@ -34,7 +34,7 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
         group.interItemSpacing = .fixed(24)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 30
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 0, trailing: 16)
         return section
     }
 
@@ -44,6 +44,7 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
         self.layer.shadowOpacity = 1
         self.layer.shadowRadius = 8
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.clipsToBounds = false
         indicator.hidesWhenStopped = true
         imageView.contentMode = .scaleAspectFit
     }
