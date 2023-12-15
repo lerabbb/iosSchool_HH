@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PKHUD
 
 class CharacterCell: UICollectionViewCell, CoreCellView {
 
@@ -34,17 +33,17 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
         group.interItemSpacing = .fixed(24)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 30
-        section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 0, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 71, trailing: 16)
         return section
     }
 
     override func awakeFromNib() {
-        self.layer.cornerRadius = 15
-        self.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
-        self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 8
-        self.layer.shadowOffset = CGSize(width: 0, height: 5)
-        self.clipsToBounds = false
+        layer.cornerRadius = 15
+        layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 8
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        clipsToBounds = false
         indicator.hidesWhenStopped = true
         imageView.contentMode = .scaleAspectFit
     }
@@ -52,8 +51,10 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
     func update(with inputData: CharacterCellData) {
         if inputData.isLoading {
             indicator.startAnimating()
+            imageView.layer.opacity = 0.6
         } else {
             indicator.stopAnimating()
+            imageView.layer.opacity = 1
         }
         nameLabel.text = inputData.name ?? ""
         infoLabel.text = inputData.info ?? ""

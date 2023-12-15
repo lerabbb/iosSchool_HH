@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-EI-TLB">
-                        <rect key="frame" x="25" y="10" width="112" height="106.66666666666667"/>
+                        <rect key="frame" x="25" y="10" width="112" height="112"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="112" id="NSI-fV-AKq"/>
-                            <constraint firstAttribute="width" priority="800" constant="112" id="i7k-UA-b0t"/>
+                            <constraint firstAttribute="height" constant="112" id="NSI-fV-AKq"/>
+                            <constraint firstAttribute="width" priority="750" constant="112" id="i7k-UA-b0t"/>
                         </constraints>
                     </imageView>
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-uA-PNs">
@@ -51,11 +51,11 @@
             <color key="backgroundColor" name="iceberg-color"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="CG1-ij-hjH" secondAttribute="bottom" constant="3" id="JJB-op-lds"/>
-                <constraint firstItem="CG1-ij-hjH" firstAttribute="top" secondItem="kLa-EI-TLB" secondAttribute="bottom" constant="8" id="Twn-KF-IZt"/>
+                <constraint firstItem="kLa-EI-TLB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Pgu-dI-hhJ"/>
                 <constraint firstItem="9Db-uA-PNs" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Um0-IH-Igh"/>
+                <constraint firstItem="CG1-ij-hjH" firstAttribute="top" relation="lessThanOrEqual" secondItem="kLa-EI-TLB" secondAttribute="bottom" constant="8" id="b8h-iJ-q25"/>
                 <constraint firstAttribute="trailing" secondItem="CG1-ij-hjH" secondAttribute="trailing" id="fkJ-NN-uy6"/>
                 <constraint firstItem="kLa-EI-TLB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lUa-JO-uXW"/>
-                <constraint firstItem="kLa-EI-TLB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="oZ2-ZO-j1z"/>
                 <constraint firstItem="9Db-uA-PNs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="s2T-NK-omA"/>
                 <constraint firstItem="CG1-ij-hjH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wZJ-yX-EfS"/>
             </constraints>
