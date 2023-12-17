@@ -7,6 +7,26 @@
 
 import Foundation
 
-protocol PersonApiClient {}
+protocol PersonApiClient {
+    func findSingleEpisode(
+        url: String,
+        onRequestCompleted: @escaping (Episode?, ApiError?) -> Void
+    )
+}
 
-extension ApiClient: PersonApiClient {}
+extension ApiClient: PersonApiClient {
+
+    func findSingleEpisode(
+        url: String,
+        onRequestCompleted: @escaping (Episode?, ApiError?) -> Void
+    ) {
+        self.performRequest(url: url, data: nil, method: .get) { (result: Result<Episode, ApiError>) in
+            switch result {
+            case .success(let episode):
+                onRequestCompleted(episode, nil)
+            case .failure(let error):
+                onRequestCompleted(nil, error)
+            }
+        }
+    }
+}

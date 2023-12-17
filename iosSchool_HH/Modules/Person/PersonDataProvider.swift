@@ -7,7 +7,12 @@
 
 import Foundation
 
-protocol PersonDataProvider {}
+protocol PersonDataProvider {
+    func findSingleEpisode(
+        url: String,
+        onRequestCompleted: @escaping (Episode?, ApiError?) -> Void
+    )
+}
 
 class PersonDataProviderImp: PersonDataProvider {
 
@@ -17,4 +22,10 @@ class PersonDataProviderImp: PersonDataProvider {
         self.apiClient = apiClient
     }
 
+    func findSingleEpisode(
+        url: String,
+        onRequestCompleted: @escaping (Episode?, ApiError?) -> Void
+    ) {
+        apiClient.findSingleEpisode(url: url, onRequestCompleted: onRequestCompleted)
+    }
 }

@@ -24,9 +24,9 @@ class PersonViewImp: UIView, PersonView {
     }()
 
     func setView() {
+        backgroundColor = UIColor(named: "grey-color")
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
-//        collectionView.delegate = self
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
@@ -41,8 +41,32 @@ class PersonViewImp: UIView, PersonView {
             Sections.photoSection.create(data: data),
             Sections.episodes.create(data: data)
         ]
-        sections .forEach { $0.registrate(collectionView: collectionView) }
+        sections.forEach { $0.registrate(collectionView: collectionView) }
         collectionView.reloadData()
+    }
+
+    func updateEpisode(idx: Int, with data: PersonEpisodeCellData) {
+        let sectionNum = Sections.episodes.rawValue
+        sections[sectionNum].updateCell(at: IndexPath(item: idx, section: sectionNum), with: data)
+        guard let cell = sections[sectionNum].cell(
+            collectionView: collectionView,
+            indexPath: IndexPath(item: idx, section: sectionNum)
+        ) as? PersonEpisodeCell else {
+            return
+        }
+        cell.update(with: data)
+    }
+
+    func updatePhoto(with data: PersonPhotoCellData) {
+        let sectionNum = Sections.photoSection.rawValue
+        sections[sectionNum].updateCell(at: IndexPath(item: 0, section: sectionNum), with: data)
+        guard let cell = sections[sectionNum].cell(
+            collectionView: collectionView,
+            indexPath: IndexPath(item: 0, section: sectionNum)
+        ) as? PersonPhotoCell else {
+            return
+        }
+        cell.update(with: data)
     }
 
     // MARK: - Private
@@ -60,7 +84,6 @@ class PersonViewImp: UIView, PersonView {
             }
         }
     }
-
 
     private func layout() -> UICollectionViewLayout {
         UICollectionViewCompositionalLayout { [unowned self] section, env -> NSCollectionLayoutSection? in
