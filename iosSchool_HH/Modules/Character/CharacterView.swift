@@ -25,6 +25,7 @@ class CharacterViewImp: UIView, CharacterView {
     }()
 
     func setView() {
+        backgroundColor = UIColor(named: "grey-color")
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
