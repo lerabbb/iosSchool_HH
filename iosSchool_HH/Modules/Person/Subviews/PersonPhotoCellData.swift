@@ -16,6 +16,6 @@ struct PersonPhotoCellData: CoreCellInputData {
     init(image: UIImage?, selectClosure: ( (CoreCellInputData) -> Void)?) {
         self.selectClosure = selectClosure
         self.image = image
-        self.isLoading = (image == nil) ? true : false
+        self.isLoading = (image == nil)
     }
 }

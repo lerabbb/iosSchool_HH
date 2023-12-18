@@ -22,7 +22,7 @@ struct PersonEpisodeCellData: CoreCellInputData {
         name = nil
         airDate = nil
     }
-    init?(episode: Episode) {
+    init?(episode: Episode, selectClosure: ((CoreCellInputData) -> Void)?) {
         guard let url = URL(string: episode.url) else {
             return nil
         }

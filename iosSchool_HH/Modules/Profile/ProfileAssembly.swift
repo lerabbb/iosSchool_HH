@@ -10,7 +10,7 @@ import Foundation
 protocol ProfileAssembly {
     func profileVC() -> ProfileViewController<ProfileViewImp>
     func profileDataProvider() -> ProfileDataProvider
-    func profileCoordinator() -> ProfileCoordinator
+    func profileCoordinator(onOpenLogin: (() -> Void)?) -> ProfileCoordinator
 }
 
 extension Assembly: ProfileAssembly {
@@ -23,10 +23,10 @@ extension Assembly: ProfileAssembly {
     }
 
     func profileDataProvider() -> ProfileDataProvider {
-        ProfileDataProviderImp()
+        ProfileDataProviderImp(apiClient: apiClient)
     }
 
-    func profileCoordinator() -> ProfileCoordinator {
-        ProfileCoordinator(assembly: self, context: .init())
+    func profileCoordinator(onOpenLogin: (() -> Void)?) -> ProfileCoordinator {
+        ProfileCoordinator(assembly: self, context: .init(onOpenLogin: onOpenLogin))
     }
 }

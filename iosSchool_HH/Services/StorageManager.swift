@@ -36,6 +36,7 @@ class StorageManagerImp: StorageManager {
     func saveToken(token: TokenResponse) {
         do {
             try keychain.set(token.token, key: StorageManagerKey.token.rawValue)
+            try keychain.set(token.userId, key: StorageManagerKey.userId.rawValue)
         } catch {
             print(error as Any)
         }
@@ -46,7 +47,10 @@ class StorageManagerImp: StorageManager {
             guard let token = try keychain.get(StorageManagerKey.token.rawValue) else {
                 return nil
             }
-            return TokenResponse(token: token)
+            guard let userId = try keychain.get(StorageManagerKey.userId.rawValue) else {
+                return nil
+            }
+            return TokenResponse(token: token, userId: userId)
         } catch {
             print(error as Any)
         }
@@ -56,6 +60,7 @@ class StorageManagerImp: StorageManager {
     func removeToken() {
         do {
             try keychain.remove(StorageManagerKey.token.rawValue)
+            try keychain.remove(StorageManagerKey.userId.rawValue)
         } catch {
             print(error as Any)
         }
@@ -70,7 +75,7 @@ class StorageManagerImp: StorageManager {
             return ".. .. ...."
         }
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd mm yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy"
         return dateFormatter.string(from: date)
     }
 }
@@ -78,6 +83,7 @@ class StorageManagerImp: StorageManager {
 private extension StorageManagerImp {
     enum StorageManagerKey: String {
         case token
+        case userId
         case notFirstLaunch
         case lastAuthDate
     }

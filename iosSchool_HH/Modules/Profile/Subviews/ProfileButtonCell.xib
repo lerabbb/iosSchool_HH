@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProfileButtonCell" customModule="iosSchool_HH" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5e-DD-h9F">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="h6O-8b-zYf"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="F5e-DD-h9F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DaH-Pz-m7K"/>
+                <constraint firstAttribute="bottom" secondItem="F5e-DD-h9F" secondAttribute="bottom" id="TZE-lT-EyH"/>
+                <constraint firstItem="F5e-DD-h9F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZhY-Oo-c1W"/>
+                <constraint firstAttribute="trailing" secondItem="F5e-DD-h9F" secondAttribute="trailing" id="b0z-5v-yU0"/>
+            </constraints>
+            <size key="customSize" width="360" height="40"/>
+            <connections>
+                <outlet property="exitButton" destination="F5e-DD-h9F" id="y1u-Eb-8Tg"/>
+            </connections>
+            <point key="canvasLocation" x="250.38167938931298" y="16.197183098591552"/>
+        </collectionViewCell>
+    </objects>
+</document>

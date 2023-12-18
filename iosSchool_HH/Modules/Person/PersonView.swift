@@ -10,6 +10,8 @@ import UIKit
 protocol PersonView: UIView {
     func setView()
     func update(data: PersonViewData)
+    func updateEpisode(idx: Int, with data: PersonEpisodeCellData)
+    func updatePhoto(with data: PersonPhotoCellData)
 }
 
 class PersonViewImp: UIView, PersonView {

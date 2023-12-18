@@ -10,10 +10,18 @@ import UIKit
 class ProfileCoordinator: BaseCoordinator<ProfileCoordinator.Context> {
 
     struct Context {
+        let onOpenLogin: (() -> Void)?
     }
 
     override func make() -> UIViewController? {
-        let controller = assembly.profileVC()
-        return controller
+        let profileVC = assembly.profileVC()
+        profileVC.onExit = { [weak profileVC] in
+            let coordinator = self.assembly.authCoordinator(onOpenLogin: self.context.onOpenLogin)
+            guard let authVC = coordinator.make() else {
+                return
+            }
+            profileVC?.show(authVC, sender: profileVC)
+        }
+        return profileVC
     }
 }

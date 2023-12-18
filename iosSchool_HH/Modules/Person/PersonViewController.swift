@@ -48,7 +48,7 @@ class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
                     guard let episode else {
                         return
                     }
-                    guard let cellData = PersonEpisodeCellData(episode: episode) else {
+                    guard let cellData = PersonEpisodeCellData(episode: episode, selectClosure: nil) else {
                         return
                     }
                     DispatchQueue.main.async {
