@@ -9,7 +9,7 @@ import UIKit
 
 enum RootTab: Int {
     case locations = 0
-    case cabinet
+    case profile
 
     var tabBarItem: UITabBarItem {
         let tabBarItem = UITabBarItem(
@@ -33,7 +33,7 @@ enum RootTab: Int {
         switch self {
         case .locations:
             return "Выбор планеты"
-        case .cabinet:
+        case .profile:
             return "Профиль"
         }
     }
@@ -42,7 +42,7 @@ enum RootTab: Int {
         switch self {
         case .locations:
             return UIImage(named: "locations")
-        case .cabinet:
+        case .profile:
             return UIImage(named: "cabinet")
         }
     }

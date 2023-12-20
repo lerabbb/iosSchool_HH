@@ -48,11 +48,13 @@ class PersonViewImp: UIView, PersonView {
     }
 
     func updateEpisode(idx: Int, with data: PersonEpisodeCellData) {
-        let sectionNum = Sections.episodes.rawValue
-        sections[sectionNum].updateCell(at: IndexPath(item: idx, section: sectionNum), with: data)
-        guard let cell = sections[sectionNum].cell(
+        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonEpisodeSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: idx, section: sectionIdx), with: data)
+        guard let cell = sections[sectionIdx].cell(
             collectionView: collectionView,
-            indexPath: IndexPath(item: idx, section: sectionNum)
+            indexPath: IndexPath(item: idx, section: sectionIdx)
         ) as? PersonEpisodeCell else {
             return
         }
@@ -60,11 +62,13 @@ class PersonViewImp: UIView, PersonView {
     }
 
     func updatePhoto(with data: PersonPhotoCellData) {
-        let sectionNum = Sections.photoSection.rawValue
-        sections[sectionNum].updateCell(at: IndexPath(item: 0, section: sectionNum), with: data)
-        guard let cell = sections[sectionNum].cell(
+        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonEpisodeSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)
+        guard let cell = sections[sectionIdx].cell(
             collectionView: collectionView,
-            indexPath: IndexPath(item: 0, section: sectionNum)
+            indexPath: IndexPath(item: 0, section: sectionIdx)
         ) as? PersonPhotoCell else {
             return
         }

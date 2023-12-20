@@ -22,5 +22,4 @@ struct NetworkConstants {
         static let characterURL = "https://rickandmortyapi.com/api/character"
         static let episodeURL = "https://rickandmortyapi.com/api/episode"
     }
-
 }

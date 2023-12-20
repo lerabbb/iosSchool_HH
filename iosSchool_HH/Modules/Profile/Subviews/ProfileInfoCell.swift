@@ -70,5 +70,4 @@ class ProfileInfoCell: UICollectionViewCell, CoreCellView {
     private func styleLabel(label: UILabel) {
         label.textColor =  UIColor(named: "placeholder-color") ?? UIColor(.black)
     }
-
 }

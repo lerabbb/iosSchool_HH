@@ -30,11 +30,11 @@ class ProfilePhotoCell: UICollectionViewCell, CoreCellView {
 
     override func awakeFromNib() {
         backgroundImageView.image = UIImage(named: "profile-background")
-        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.contentMode = .scaleAspectFit
+        photoImageView.contentMode = .scaleAspectFit
     }
 
     func update(with inputData: ProfilePhotoCellData) {
         photoImageView.image = inputData.image ?? UIImage(named: "placeholder")
-        photoImageView.contentMode = .scaleAspectFill
     }
 }

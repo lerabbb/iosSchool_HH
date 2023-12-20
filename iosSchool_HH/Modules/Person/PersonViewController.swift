@@ -31,13 +31,10 @@ class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
         rootView.setView()
         rootView.update(data: .init(image: nil, episodeUrls: episodes))
 
-        DispatchQueue.global().async {
+        if self.imageUrl != "" {
             self.imageService.getImage(url: self.imageUrl) { image in
                 DispatchQueue.main.async {
-                    self.rootView.updatePhoto(with: PersonPhotoCellData(
-                        image: image,
-                        selectClosure: nil
-                    ))
+                    self.rootView.updatePhoto(with: PersonPhotoCellData(image: image))
                 }
             }
         }
@@ -48,7 +45,7 @@ class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
                     guard let episode else {
                         return
                     }
-                    guard let cellData = PersonEpisodeCellData(episode: episode, selectClosure: nil) else {
+                    guard let cellData = PersonEpisodeCellData(episode: episode) else {
                         return
                     }
                     DispatchQueue.main.async {

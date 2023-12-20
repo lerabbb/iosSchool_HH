@@ -8,10 +8,5 @@
 import Foundation
 
 struct Profile: Codable {
-    let id: String
     let username: String
-    let subscribed: Bool
-    let subscribersCount: Int
-    let postsCount: Int
-    let imagesCount: Int
 }

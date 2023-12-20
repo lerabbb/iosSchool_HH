@@ -49,7 +49,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         navVC.setViewControllers([locationsVC], animated: false)
         navVC.tabBarItem = RootTab.locations.tabBarItem
 
-        profileVC.tabBarItem = RootTab.cabinet.tabBarItem
+        profileVC.tabBarItem = RootTab.profile.tabBarItem
         tabVC.setViewControllers([navVC, profileVC], animated: false)
         setRoot(viewController: tabVC)
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
@@ -43,6 +44,7 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
             }
         ))
 
+        //HUD.show(.progress)
         guard let userId = storageManager.getToken()?.userId else {
             return
         }

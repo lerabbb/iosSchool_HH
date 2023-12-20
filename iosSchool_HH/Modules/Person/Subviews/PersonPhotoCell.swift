@@ -38,7 +38,7 @@ class PersonPhotoCell: UICollectionViewCell, CoreCellView {
         layer.masksToBounds = false
         clipsToBounds = false
         indicator.hidesWhenStopped = true
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
     }
 
     func update(with inputData: PersonPhotoCellData) {
