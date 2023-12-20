@@ -13,7 +13,6 @@ struct CoordinatorContext {}
 class AppCoordinator: BaseCoordinator<CoordinatorContext> {
 
     private var window: UIWindow?
-    private weak var authCoordinator: AuthCoordinator?
 
     func start(window: UIWindow?) {
         self.window = window
@@ -30,19 +29,19 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
             setTabVC()
             return
         }
-        authCoordinator = assembly.authCoordinator { [ weak self ] in
+        let authCoordinator = assembly.authCoordinator { [ weak self ] in
             DispatchQueue.main.async {
                 self?.setTabVC()
             }
         }
-        setRoot(viewController: authCoordinator?.make())
+        setRoot(viewController: authCoordinator.make())
     }
 
     private func setTabVC() {
         let tabVC = assembly.rootTabBarController()
 
         let locationsCoord = assembly.locationCoordinator()
-        let profileCoord = assembly.profileCoordinator(onOpenLogin: authCoordinator?.context.onOpenLogin)
+        let profileCoord = assembly.profileCoordinator(onExit: authBootstrap)
         guard let locationsVC = locationsCoord.make(), let profileVC = profileCoord.make() else {
             return
         }

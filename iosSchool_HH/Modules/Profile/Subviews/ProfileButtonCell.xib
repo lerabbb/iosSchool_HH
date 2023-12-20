@@ -16,27 +16,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5e-DD-h9F">
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выйти" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-BY-DI9">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="h6O-8b-zYf"/>
-                        </constraints>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    </button>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="F5e-DD-h9F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DaH-Pz-m7K"/>
-                <constraint firstAttribute="bottom" secondItem="F5e-DD-h9F" secondAttribute="bottom" id="TZE-lT-EyH"/>
-                <constraint firstItem="F5e-DD-h9F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZhY-Oo-c1W"/>
-                <constraint firstAttribute="trailing" secondItem="F5e-DD-h9F" secondAttribute="trailing" id="b0z-5v-yU0"/>
+                <constraint firstItem="Dnp-BY-DI9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0tE-a2-4PS"/>
+                <constraint firstAttribute="trailing" secondItem="Dnp-BY-DI9" secondAttribute="trailing" id="6ll-Qx-z6l"/>
+                <constraint firstItem="Dnp-BY-DI9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="897-IP-SHk"/>
+                <constraint firstAttribute="bottom" secondItem="Dnp-BY-DI9" secondAttribute="bottom" id="uN8-Zi-J2Q"/>
             </constraints>
             <size key="customSize" width="360" height="40"/>
             <connections>
-                <outlet property="exitButton" destination="F5e-DD-h9F" id="y1u-Eb-8Tg"/>
+                <outlet property="exitLabel" destination="Dnp-BY-DI9" id="IR0-Mn-vZf"/>
             </connections>
             <point key="canvasLocation" x="250.38167938931298" y="16.197183098591552"/>
         </collectionViewCell>

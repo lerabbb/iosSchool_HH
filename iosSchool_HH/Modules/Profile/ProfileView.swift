@@ -11,7 +11,6 @@ protocol ProfileView: UIView {
     func setView()
     func update(data: ProfileViewData)
     func updateLogin(data: ProfileLoginCellData)
-    func updateButton(data: ProfileButtonCellData)
 }
 
 class ProfileViewImp: UIView, ProfileView {
@@ -29,6 +28,7 @@ class ProfileViewImp: UIView, ProfileView {
         backgroundColor = UIColor(named: "grey-color")
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
+        collectionView.delegate = self
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
@@ -56,18 +56,6 @@ class ProfileViewImp: UIView, ProfileView {
             collectionView: collectionView,
             indexPath: IndexPath(item: 0, section: sectionNum)
         ) as? ProfileLoginCell else {
-            return
-        }
-        cell.update(with: data)
-    }
-
-    func updateButton(data: ProfileButtonCellData) {
-        let sectionNum = Sections.buttonSection.rawValue
-        sections[sectionNum].updateCell(at: IndexPath(item: 0, section: sectionNum), with: data)
-        guard let cell = sections[sectionNum].cell(
-            collectionView: collectionView,
-            indexPath: IndexPath(item: 0, section: sectionNum)
-        ) as? ProfileButtonCell else {
             return
         }
         cell.update(with: data)
@@ -140,6 +128,14 @@ extension ProfileViewImp: UICollectionViewDataSource {
             indexPath: indexPath,
             kind: kind
         ) ?? UICollectionReusableView()
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension ProfileViewImp: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        sections[indexPath.section].selectCell(at: indexPath.item)
     }
 }
 

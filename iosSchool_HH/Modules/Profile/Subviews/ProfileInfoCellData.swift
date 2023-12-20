@@ -15,12 +15,8 @@ struct ProfileInfoCellData: CoreCellInputData {
     let dateTitle = "Дата входа"
     let colorTitle = "Цвет профиля"
 
-    init(
-        authDate: String?,
-        profileColor: UIColor?,
-        selectClosure: ((CoreCellInputData) -> Void)?
-    ) {
-        self.selectClosure = selectClosure
+    init(authDate: String?, profileColor: UIColor?) {
+        self.selectClosure = nil
         self.authDate = authDate
         self.profileColor = profileColor
     }

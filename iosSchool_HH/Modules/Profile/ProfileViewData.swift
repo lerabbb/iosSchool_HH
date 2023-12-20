@@ -20,9 +20,9 @@ struct ProfileViewData {
         profileColor: UIColor?,
         selectExit: ((CoreCellInputData) -> Void)?
     ) {
-        self.photoCellData = ProfilePhotoCellData(image: image, selectClosure: nil)
-        self.loginCellData = ProfileLoginCellData(profile: profile, selectClosure: nil)
-        self.infoCellData = ProfileInfoCellData(authDate: lastAuthDate, profileColor: profileColor, selectClosure: nil)
+        self.photoCellData = ProfilePhotoCellData(image: image)
+        self.loginCellData = ProfileLoginCellData(profile: profile)
+        self.infoCellData = ProfileInfoCellData(authDate: lastAuthDate, profileColor: profileColor)
         self.buttonCellData = ProfileButtonCellData(selectClosure: selectExit)
     }
 }

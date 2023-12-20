@@ -8,17 +8,19 @@
 import UIKit
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
-    var onExit: (() -> Void)?
 
+    private var onExit: (() -> Void)?
     private let dataProvider: ProfileDataProvider
     private let storageManager: StorageManager
 
     init(
         dataProvider: ProfileDataProvider,
-        storageManager: StorageManager
+        storageManager: StorageManager,
+        onExit: (() -> Void)?
     ) {
         self.dataProvider = dataProvider
         self.storageManager = storageManager
+        self.onExit = onExit
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,14 +37,11 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
             profile: nil,
             lastAuthDate: storageManager.getLastAuthDate(),
             profileColor: nil,
-            selectExit: nil
+            selectExit: { [weak self] _ in
+                self?.storageManager.removeToken()
+                self?.onExit?()
+            }
         ))
-
-        let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] _ in
-            self?.storageManager.removeToken()
-            self?.onExit?()
-        }
-        rootView.updateButton(data: ProfileButtonCellData(selectClosure: selectClosure))
 
         guard let userId = storageManager.getToken()?.userId else {
             return
@@ -53,10 +52,7 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
                     return
                 }
                 DispatchQueue.main.async {
-                    self?.rootView.updateLogin(data: ProfileLoginCellData(
-                        profile: profile,
-                        selectClosure: nil
-                    ))
+                    self?.rootView.updateLogin(data: ProfileLoginCellData(profile: profile))
                 }
             }
         }

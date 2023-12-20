@@ -12,8 +12,8 @@ struct ProfileLoginCellData: CoreCellInputData {
 
     let login: String?
 
-    init(profile: Profile?, selectClosure: ((CoreCellInputData) -> Void)?) {
+    init(profile: Profile?) {
         self.login = profile?.username
-        self.selectClosure = selectClosure
+        self.selectClosure = nil
     }
 }

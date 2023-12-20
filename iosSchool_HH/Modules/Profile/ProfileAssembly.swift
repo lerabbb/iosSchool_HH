@@ -8,17 +8,18 @@
 import Foundation
 
 protocol ProfileAssembly {
-    func profileVC() -> ProfileViewController<ProfileViewImp>
+    func profileVC(onExit: (() -> Void)?) -> ProfileViewController<ProfileViewImp>
     func profileDataProvider() -> ProfileDataProvider
-    func profileCoordinator(onOpenLogin: (() -> Void)?) -> ProfileCoordinator
+    func profileCoordinator(onExit: (() -> Void)?) -> ProfileCoordinator
 }
 
 extension Assembly: ProfileAssembly {
 
-    func profileVC() -> ProfileViewController<ProfileViewImp> {
+    func profileVC(onExit: (() -> Void)?) -> ProfileViewController<ProfileViewImp> {
         .init(
             dataProvider: profileDataProvider(),
-            storageManager: storageManager
+            storageManager: storageManager,
+            onExit: onExit
         )
     }
 
@@ -26,7 +27,7 @@ extension Assembly: ProfileAssembly {
         ProfileDataProviderImp(apiClient: apiClient)
     }
 
-    func profileCoordinator(onOpenLogin: (() -> Void)?) -> ProfileCoordinator {
-        ProfileCoordinator(assembly: self, context: .init(onOpenLogin: onOpenLogin))
+    func profileCoordinator(onExit: (() -> Void)?) -> ProfileCoordinator {
+        ProfileCoordinator(assembly: self, context: .init(onExit: onExit))
     }
 }

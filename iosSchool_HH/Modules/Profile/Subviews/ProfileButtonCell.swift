@@ -1,5 +1,5 @@
 //
-//  ProfileButtonCell.swift
+//  ProfileLabelCell.swift
 //  iosSchool_HH
 //
 //  Created by student on 18.12.2023.
@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileButtonCell: UICollectionViewCell, CoreCellView {
 
-    @IBOutlet private weak var exitButton: UIButton!
+    @IBOutlet private weak var exitLabel: UILabel!
 
     static func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(
@@ -28,23 +28,22 @@ class ProfileButtonCell: UICollectionViewCell, CoreCellView {
     }
 
     override func awakeFromNib() {
-        styleButton(button: exitButton)
+        clipsToBounds = false
+        styleLabel(label: exitLabel)
     }
 
     func update(with inputData: ProfileButtonCellData) {
-        exitButton.titleLabel?.text = inputData.exitTitle
     }
 
     // MARK: - Private
 
-    private func styleButton(button: UIButton) {
-        button.layer.backgroundColor = UIColor(named: "button-color")?.cgColor
-        button.layer.cornerRadius = 10
-        button.titleLabel?.textColor = UIColor(.white)
+    private func styleLabel(label: UILabel) {
+        label.layer.backgroundColor = UIColor(named: "button-color")?.cgColor
+        label.layer.cornerRadius = 10
 
-        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 8
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
+        label.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        label.layer.shadowOpacity = 1
+        label.layer.shadowRadius = 8
+        label.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 }

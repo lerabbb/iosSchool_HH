@@ -9,10 +9,4 @@ import Foundation
 
 struct ProfileButtonCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
-
-    let exitTitle = "Выйти"
-
-    init(selectClosure: ((CoreCellInputData) -> Void)?) {
-        self.selectClosure = selectClosure
-    }
 }
