@@ -29,12 +29,12 @@ class ProfilePhotoCell: UICollectionViewCell, CoreCellView {
     }
 
     override func awakeFromNib() {
-        backgroundImageView.image = UIImage(named: "profile-background")
         backgroundImageView.contentMode = .scaleAspectFit
         photoImageView.contentMode = .scaleAspectFit
     }
 
     func update(with inputData: ProfilePhotoCellData) {
-        photoImageView.image = inputData.image ?? UIImage(named: "placeholder")
+        backgroundImageView.image = inputData.largeAvatarImg ?? UIImage(named: "placeholder")
+        photoImageView.image = inputData.smallAvatarImg ?? UIImage(named: "placeholder")
     }
 }

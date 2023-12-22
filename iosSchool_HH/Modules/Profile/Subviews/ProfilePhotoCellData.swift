@@ -10,5 +10,6 @@ import UIKit
 struct ProfilePhotoCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
 
-    let image: UIImage?
+    let smallAvatarImg: UIImage?
+    let largeAvatarImg: UIImage?
 }

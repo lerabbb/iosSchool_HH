@@ -7,6 +7,7 @@
 
 import UIKit
 import PKHUD
+import SPIndicator
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
@@ -33,30 +34,51 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
     override func viewDidLoad() {
         super.viewDidLoad()
         rootView.setView()
+        let infoCells = [
+            ProfileInfoCellData(
+                infoType: .date,
+                authDate: self.storageManager.getLastAuthDate(),
+                profileColor: nil
+            ),
+            ProfileInfoCellData(
+                infoType: .color,
+                authDate: nil,
+                profileColor: UIColor(named: "iceberg-color")
+            )
+        ]
         rootView.update(data: .init(
-            image: UIImage(named: "user-profile"),
+            smallAvatarImg: UIImage(named: "user-profile"),
+            largeAvatarImg: UIImage(named: "profile-background"),
             profile: nil,
-            lastAuthDate: storageManager.getLastAuthDate(),
-            profileColor: nil,
+            infoCells: infoCells,
             selectExit: { [weak self] _ in
                 self?.storageManager.removeToken()
                 self?.onExit?()
-            }
-        ))
-
-        //HUD.show(.progress)
+            })
+        )
+        HUD.show(.progress)
         guard let userId = storageManager.getToken()?.userId else {
+            self.showFail(error: "token not found")
             return
         }
-        DispatchQueue.global().async {
-            self.dataProvider.findSingleProfile(id: userId) { [weak self] profile, _ in
-                guard let profile else {
-                    return
-                }
-                DispatchQueue.main.async {
-                    self?.rootView.updateLogin(data: ProfileLoginCellData(profile: profile))
-                }
+
+        self.dataProvider.findSingleProfile(id: userId) { [weak self] profile, error in
+            guard let profile else {
+                self?.showFail(error: error?.rawValue ?? "")
+                return
+            }
+            DispatchQueue.main.async {
+                HUD.hide()
+                self?.rootView.updateLogin(data: ProfileLoginCellData(login: profile.username))
             }
         }
+    }
+
+    // MARK: - Private
+
+    private func showFail(error: String) {
+        HUD.hide()
+        SPIndicator.present(title: error, haptic: .error)
+        rootView.updatePhoto(data: ProfilePhotoCellData(smallAvatarImg: nil, largeAvatarImg: nil))
     }
 }

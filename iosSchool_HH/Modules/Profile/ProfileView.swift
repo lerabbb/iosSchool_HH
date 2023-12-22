@@ -11,6 +11,7 @@ protocol ProfileView: UIView {
     func setView()
     func update(data: ProfileViewData)
     func updateLogin(data: ProfileLoginCellData)
+    func updatePhoto(data: ProfilePhotoCellData)
 }
 
 class ProfileViewImp: UIView, ProfileView {
@@ -50,12 +51,42 @@ class ProfileViewImp: UIView, ProfileView {
     }
 
     func updateLogin(data: ProfileLoginCellData) {
-        let sectionNum = Sections.loginSection.rawValue
-        sections[sectionNum].updateCell(at: IndexPath(item: 0, section: sectionNum), with: data)
-        guard let cell = sections[sectionNum].cell(
+        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfileLoginSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)
+        guard let cell = sections[sectionIdx].cell(
             collectionView: collectionView,
-            indexPath: IndexPath(item: 0, section: sectionNum)
+            indexPath: IndexPath(item: 0, section: sectionIdx)
         ) as? ProfileLoginCell else {
+            return
+        }
+        cell.update(with: data)
+    }
+
+    func updatePhoto(data: ProfilePhotoCellData) {
+        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfilePhotoSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)
+        guard let cell = sections[sectionIdx].cell(
+            collectionView: collectionView,
+            indexPath: IndexPath(item: 0, section: sectionIdx)
+        ) as? ProfilePhotoCell else {
+            return
+        }
+        cell.update(with: data)
+    }
+
+    func updateInfo(idx: Int, with data: ProfileInfoCellData) {
+        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfilePhotoSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: idx, section: 0), with: data)
+        guard let cell = sections[sectionIdx].cell(
+            collectionView: collectionView,
+            indexPath: IndexPath(item: idx, section: 0)
+        ) as? ProfileInfoCell else {
             return
         }
         cell.update(with: data)
@@ -76,7 +107,7 @@ class ProfileViewImp: UIView, ProfileView {
             case .loginSection:
                 return ProfileLoginSection(cellsData: [data.loginCellData])
             case .infoSection:
-                return ProfileInfoSection(cellsData: [data.infoCellData])
+                return ProfileInfoSection(cellsData: data.infoCells)
             case .buttonSection:
                 return ProfileButtonSection(cellsData: [data.buttonCellData])
             }

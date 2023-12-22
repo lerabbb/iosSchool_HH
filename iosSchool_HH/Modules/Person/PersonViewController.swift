@@ -31,7 +31,7 @@ class PersonViewController<View: PersonViewImp>: BaseViewController<View> {
         rootView.setView()
         rootView.update(data: .init(image: nil, episodeUrls: episodes))
 
-        if self.imageUrl != "" {
+        if !self.imageUrl.isEmpty {
             self.imageService.getImage(url: self.imageUrl) { image in
                 DispatchQueue.main.async {
                     self.rootView.updatePhoto(with: PersonPhotoCellData(image: image))

@@ -10,19 +10,19 @@ import UIKit
 struct ProfileViewData {
     let photoCellData: ProfilePhotoCellData
     let loginCellData: ProfileLoginCellData
-    let infoCellData: ProfileInfoCellData
+    let infoCells: [ProfileInfoCellData]
     let buttonCellData: ProfileButtonCellData
 
     init(
-        image: UIImage?,
+        smallAvatarImg: UIImage?,
+        largeAvatarImg: UIImage?,
         profile: Profile?,
-        lastAuthDate: String?,
-        profileColor: UIColor?,
+        infoCells: [ProfileInfoCellData],
         selectExit: ((CoreCellInputData) -> Void)?
     ) {
-        self.photoCellData = ProfilePhotoCellData(image: image)
-        self.loginCellData = ProfileLoginCellData(profile: profile)
-        self.infoCellData = ProfileInfoCellData(authDate: lastAuthDate, profileColor: profileColor)
+        self.photoCellData = ProfilePhotoCellData(smallAvatarImg: smallAvatarImg, largeAvatarImg: largeAvatarImg)
+        self.loginCellData = ProfileLoginCellData(login: profile?.username)
+        self.infoCells = infoCells
         self.buttonCellData = ProfileButtonCellData(selectClosure: selectExit)
     }
 }

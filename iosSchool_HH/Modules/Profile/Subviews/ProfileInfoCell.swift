@@ -9,11 +9,10 @@ import UIKit
 
 class ProfileInfoCell: UICollectionViewCell, CoreCellView {
 
-    @IBOutlet private weak var dateInfoView: UIView!
-    @IBOutlet private weak var colorInfoView: UIView!
-    @IBOutlet private weak var dateTitleLabel: UILabel!
+    @IBOutlet private weak var view: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var colorTitleLabel: UILabel!
     @IBOutlet private weak var colorView: UIView!
 
     static func layoutSection() -> NSCollectionLayoutSection? {
@@ -24,28 +23,28 @@ class ProfileInfoCell: UICollectionViewCell, CoreCellView {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(98)
+            heightDimension: .absolute(40)
         )
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 18
         section.contentInsets = NSDirectionalEdgeInsets(top: 70, leading: 32, bottom: 0, trailing: 32)
         return section
     }
 
     override func awakeFromNib() {
         clipsToBounds = false
-        styleInfoView(view: dateInfoView)
-        styleInfoView(view: colorInfoView)
+        styleInfoView(view: view)
         styleColorView(view: colorView)
-        styleLabel(label: dateTitleLabel)
+        styleLabel(label: titleLabel)
         styleLabel(label: dateLabel)
-        styleLabel(label: colorTitleLabel)
     }
 
     func update(with inputData: ProfileInfoCellData) {
-        dateTitleLabel.text = inputData.dateTitle
-        colorTitleLabel.text = inputData.colorTitle
+        titleLabel.text = inputData.infoType.rawValue
+        dateLabel.isHidden = inputData.infoType.isNotDate()
         dateLabel.text = inputData.authDate
+        colorView.isHidden = inputData.infoType.isNotColor()
         colorView.backgroundColor = inputData.profileColor ?? UIColor(named: "iceberg-color")
     }
 

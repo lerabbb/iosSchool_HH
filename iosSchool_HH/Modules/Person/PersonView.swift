@@ -62,7 +62,7 @@ class PersonViewImp: UIView, PersonView {
     }
 
     func updatePhoto(with data: PersonPhotoCellData) {
-        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonEpisodeSection }) else {
+        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonPhotoSection }) else {
             return
         }
         sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)

@@ -8,16 +8,21 @@
 import UIKit
 
 struct ProfileInfoCellData: CoreCellInputData {
+    enum PofileInfoType: String {
+        case date = "Дата входа"
+        case color = "Цвет профиля"
+
+        func isNotDate() -> Bool {
+            self != PofileInfoType.date
+        }
+        func isNotColor() -> Bool {
+            self != PofileInfoType.color
+        }
+    }
+
     var selectClosure: ((CoreCellInputData) -> Void)?
 
+    let infoType: PofileInfoType
     let authDate: String?
     let profileColor: UIColor?
-    let dateTitle = "Дата входа"
-    let colorTitle = "Цвет профиля"
-
-    init(authDate: String?, profileColor: UIColor?) {
-        self.selectClosure = nil
-        self.authDate = authDate
-        self.profileColor = profileColor
-    }
 }
