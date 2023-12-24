@@ -78,20 +78,6 @@ class ProfileViewImp: UIView, ProfileView {
         cell.update(with: data)
     }
 
-    func updateInfo(idx: Int, with data: ProfileInfoCellData) {
-        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfilePhotoSection }) else {
-            return
-        }
-        sections[sectionIdx].updateCell(at: IndexPath(item: idx, section: 0), with: data)
-        guard let cell = sections[sectionIdx].cell(
-            collectionView: collectionView,
-            indexPath: IndexPath(item: idx, section: 0)
-        ) as? ProfileInfoCell else {
-            return
-        }
-        cell.update(with: data)
-    }
-
     // MARK: - Private
 
     private enum Sections: Int {
