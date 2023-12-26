@@ -16,23 +16,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="289" height="333"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-profile" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-6F-nGg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-6F-nGg">
                         <rect key="frame" x="16" y="16" width="257" height="301"/>
                     </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="O7O-3I-EZ0">
+                        <rect key="frame" x="134.66666666666666" y="156.66666666666666" width="20" height="20"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="BP3-6F-nGg" secondAttribute="bottom" constant="16" id="0X3-Uk-oiG"/>
                 <constraint firstItem="BP3-6F-nGg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="PS1-9v-HIy"/>
+                <constraint firstItem="O7O-3I-EZ0" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="WJ6-sZ-ngg"/>
                 <constraint firstAttribute="trailing" secondItem="BP3-6F-nGg" secondAttribute="trailing" constant="16" id="i0h-n8-IwY"/>
                 <constraint firstItem="BP3-6F-nGg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="sT2-uL-6pu"/>
+                <constraint firstItem="O7O-3I-EZ0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ysV-lY-LJo"/>
             </constraints>
             <size key="customSize" width="289" height="333"/>
+            <connections>
+                <outlet property="imageView" destination="BP3-6F-nGg" id="uAQ-pl-fn9"/>
+                <outlet property="indicator" destination="O7O-3I-EZ0" id="Nhu-yD-z5r"/>
+            </connections>
             <point key="canvasLocation" x="-31.297709923664122" y="119.36619718309859"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="user-profile" width="110" height="110"/>
-    </resources>
 </document>

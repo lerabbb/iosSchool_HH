@@ -16,7 +16,7 @@ protocol PersonAssembly {
 extension Assembly: PersonAssembly {
 
     func personVC(data: CharacterCellData) -> PersonViewController <PersonViewImp> {
-        .init(dataProvider: personDataProvider(), data: data)
+        .init(dataProvider: personDataProvider(), data: data, imageService: imageService)
     }
 
     func personDataProvider() -> PersonDataProvider {
@@ -27,4 +27,3 @@ extension Assembly: PersonAssembly {
         PersonCoordinator(assembly: self, context: .init(data: data))
     }
 }
-

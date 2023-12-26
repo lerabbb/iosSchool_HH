@@ -65,7 +65,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                             character: character,
                             isLoading: false,
                             image: image,
-                            selectClosure: nil
+                            selectClosure: selectClosure
                         ))
                     }
                 })
@@ -81,7 +81,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
             return
         }
         DispatchQueue.global().async {
-            self.dataProvider.findSingleCharacter(url: url) { [weak self] character, error in
+            self.dataProvider.findSingleCharacter(url: url) { [weak self] character, _ in
                 guard let character else {
                     return
                 }

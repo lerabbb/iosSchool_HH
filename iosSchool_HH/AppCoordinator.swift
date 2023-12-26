@@ -41,16 +41,16 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         let tabVC = assembly.rootTabBarController()
 
         let locationsCoord = assembly.locationCoordinator()
-        // let cabinetCoord = assembly.cabinetCoodrinator()
-        guard let locationsVC = locationsCoord.make() /*, let cabinetVC = cabinetCoord.make()*/ else {
+        let profileCoord = assembly.profileCoordinator(onExit: authBootstrap)
+        guard let locationsVC = locationsCoord.make(), let profileVC = profileCoord.make() else {
             return
         }
         let navVC = assembly.rootNavigationController()
         navVC.setViewControllers([locationsVC], animated: false)
         navVC.tabBarItem = RootTab.locations.tabBarItem
 
-        // cabinetVC.tabBarItem = RootTab.cabinet.tabBarItem
-        tabVC.setViewControllers([navVC /*,cabinetVC*/], animated: false)
+        profileVC.tabBarItem = RootTab.profile.tabBarItem
+        tabVC.setViewControllers([navVC, profileVC], animated: false)
         setRoot(viewController: tabVC)
     }
 
@@ -61,5 +61,4 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         window.rootViewController = viewController
         window.makeKeyAndVisible()
     }
-
 }

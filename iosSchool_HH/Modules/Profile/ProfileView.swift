@@ -1,20 +1,20 @@
 //
-//  PersonView.swift
+//  ProfileView.swift
 //  iosSchool_HH
 //
-//  Created by student on 14.12.2023.
+//  Created by student on 18.12.2023.
 //
 
 import UIKit
 
-protocol PersonView: UIView {
+protocol ProfileView: UIView {
     func setView()
-    func update(data: PersonViewData)
-    func updateEpisode(idx: Int, with data: PersonEpisodeCellData)
-    func updatePhoto(with data: PersonPhotoCellData)
+    func update(data: ProfileViewData)
+    func updateLogin(data: ProfileLoginCellData)
+    func updatePhoto(data: ProfilePhotoCellData)
 }
 
-class PersonViewImp: UIView, PersonView {
+class ProfileViewImp: UIView, ProfileView {
 
     private var sections: [CoreSection] = []
 
@@ -29,47 +29,50 @@ class PersonViewImp: UIView, PersonView {
         backgroundColor = UIColor(named: "grey-color")
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
+        collectionView.delegate = self
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
-        collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        collectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
-    func update(data: PersonViewData) {
+    func update(data: ProfileViewData) {
         sections = [
             Sections.photoSection.create(data: data),
-            Sections.episodes.create(data: data)
+            Sections.loginSection.create(data: data),
+            Sections.infoSection.create(data: data),
+            Sections.buttonSection.create(data: data)
         ]
         sections.forEach { $0.registrate(collectionView: collectionView) }
         collectionView.reloadData()
     }
 
-    func updateEpisode(idx: Int, with data: PersonEpisodeCellData) {
-        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonEpisodeSection }) else {
-            return
-        }
-        sections[sectionIdx].updateCell(at: IndexPath(item: idx, section: sectionIdx), with: data)
-        guard let cell = sections[sectionIdx].cell(
-            collectionView: collectionView,
-            indexPath: IndexPath(item: idx, section: sectionIdx)
-        ) as? PersonEpisodeCell else {
-            return
-        }
-        cell.update(with: data)
-    }
-
-    func updatePhoto(with data: PersonPhotoCellData) {
-        guard let sectionIdx = sections.firstIndex(where: { $0 is PersonPhotoSection }) else {
+    func updateLogin(data: ProfileLoginCellData) {
+        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfileLoginSection }) else {
             return
         }
         sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)
         guard let cell = sections[sectionIdx].cell(
             collectionView: collectionView,
             indexPath: IndexPath(item: 0, section: sectionIdx)
-        ) as? PersonPhotoCell else {
+        ) as? ProfileLoginCell else {
+            return
+        }
+        cell.update(with: data)
+    }
+
+    func updatePhoto(data: ProfilePhotoCellData) {
+        guard let sectionIdx = sections.firstIndex(where: { $0 is ProfilePhotoSection }) else {
+            return
+        }
+        sections[sectionIdx].updateCell(at: IndexPath(item: 0, section: sectionIdx), with: data)
+        guard let cell = sections[sectionIdx].cell(
+            collectionView: collectionView,
+            indexPath: IndexPath(item: 0, section: sectionIdx)
+        ) as? ProfilePhotoCell else {
             return
         }
         cell.update(with: data)
@@ -79,14 +82,20 @@ class PersonViewImp: UIView, PersonView {
 
     private enum Sections: Int {
         case photoSection
-        case episodes
+        case loginSection
+        case infoSection
+        case buttonSection
 
-        func create(data: PersonViewData) -> CoreSection {
+        func create(data: ProfileViewData) -> CoreSection {
             switch self {
             case .photoSection:
-                return PersonPhotoSection(cellsData: [data.photoCellData])
-            case .episodes:
-                return PersonEpisodeSection(cellsData: data.episodeData, headerData: data.episodeHeader)
+                return ProfilePhotoSection(cellsData: [data.photoCellData])
+            case .loginSection:
+                return ProfileLoginSection(cellsData: [data.loginCellData])
+            case .infoSection:
+                return ProfileInfoSection(cellsData: data.infoCells)
+            case .buttonSection:
+                return ProfileButtonSection(cellsData: [data.buttonCellData])
             }
         }
     }
@@ -103,7 +112,7 @@ class PersonViewImp: UIView, PersonView {
 
 // MARK: - UICollectionViewDataSource
 
-extension PersonViewImp: UICollectionViewDataSource {
+extension ProfileViewImp: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         sections.count
@@ -139,7 +148,17 @@ extension PersonViewImp: UICollectionViewDataSource {
     }
 }
 
-private extension PersonViewImp {
-    typealias PersonPhotoSection = Section<PersonPhotoCell, EmptyReusableView, EmptyReusableView>
-    typealias PersonEpisodeSection = Section<PersonEpisodeCell, PersonHeaderView, EmptyReusableView>
+// MARK: - UICollectionViewDelegate
+
+extension ProfileViewImp: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        sections[indexPath.section].selectCell(at: indexPath.item)
+    }
+}
+
+private extension ProfileViewImp {
+    typealias ProfilePhotoSection = Section<ProfilePhotoCell, EmptyReusableView, EmptyReusableView>
+    typealias ProfileLoginSection = Section<ProfileLoginCell, EmptyReusableView, EmptyReusableView>
+    typealias ProfileInfoSection = Section<ProfileInfoCell, EmptyReusableView, EmptyReusableView>
+    typealias ProfileButtonSection = Section<ProfileButtonCell, EmptyReusableView, EmptyReusableView>
 }
