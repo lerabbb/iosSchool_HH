@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F01A8FD2B18CC6C0062BB7A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01A8FC2B18CC6C0062BB7A /* ImageService.swift */; };
-		3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */; };
 		3F096CBE2B0D23ED002892CA /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */; };
 		3F096CC02B0F8841002892CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CBF2B0F8841002892CA /* TabBarController.swift */; };
 		3F096CC52B0F8943002892CA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F096CC42B0F8943002892CA /* BaseNavigationController.swift */; };
@@ -126,7 +125,6 @@
 
 /* Begin PBXFileReference section */
 		3F01A8FC2B18CC6C0062BB7A /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		3F096CBD2B0D23ED002892CA /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		3F096CBF2B0F8841002892CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3F096CC42B0F8943002892CA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 				3F2307472AE11A9100D9223D /* Assets.xcassets */,
 				3F2307492AE11A9100D9223D /* LaunchScreen.storyboard */,
 				3F23074C2AE11A9100D9223D /* Info.plist */,
-				3F071B8B2AE69BE60002BEB5 /* ColorGenerator.swift */,
 				3FE4F5B82AEAA5CB00E38AF7 /* Assembly.swift */,
 				3FF07BD42AF91942008E4D37 /* AppCoordinator.swift */,
 			);
@@ -699,7 +696,6 @@
 				3F4916642B1E0189008022D4 /* StorageManager.swift in Sources */,
 				3FE4F5B92AEAA5CB00E38AF7 /* Assembly.swift in Sources */,
 				3F4916F02B25CC89008022D4 /* CharacterAssembly.swift in Sources */,
-				3F071B8C2AE69BE60002BEB5 /* ColorGenerator.swift in Sources */,
 				3FF07C572B064095008E4D37 /* BaseViewController.swift in Sources */,
 				3FF07BF02AFCDFEC008E4D37 /* RegistrationCoordinator.swift in Sources */,
 				3F4916812B21FB4A008022D4 /* CoreSection.swift in Sources */,
