@@ -36,5 +36,4 @@ class SplashViewController<View: SplashView>: BaseViewController<View> {
             timer.invalidate()
         }
     }
-
 }

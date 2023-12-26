@@ -23,7 +23,6 @@ class BaseViewController<View: UIView>: UIViewController, CoreViewController {
             return View(frame: UIScreen.main.bounds)
         } else {
             let nib = UINib(nibName: nibName, bundle: bundle)
-
             if let view = nib.instantiate(withOwner: nil, options: nil).first as? View {
                 return view
             } else {

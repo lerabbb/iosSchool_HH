@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Character: Decodable {
-    enum Gender: String, CaseIterable, Decodable {
+class Character: Codable {
+    enum Gender: String, CaseIterable, Codable {
         case female = "Female"
         case male = "Male"
         case genderless = "Genderless"
@@ -19,7 +19,7 @@ class Character: Decodable {
         }
     }
 
-    enum Status: String, CaseIterable, Decodable {
+    enum Status: String, CaseIterable, Codable {
         case alive = "Alive"
         case dead = "Dead"
         case unknown = "unknown"
@@ -37,12 +37,4 @@ class Character: Decodable {
     var episode: [String]
     let gender: Gender
     let status: Status
-
-    func description() {
-        print(
-            "character id: \(id), name: \(name), species: \(species), " +
-            "image: \(image), url: \(url), " +
-            "gender: \(gender.rawValue), status: \(status), episode: \(episode)"
-        )
-    }
 }

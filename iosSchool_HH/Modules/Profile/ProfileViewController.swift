@@ -23,7 +23,6 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         self.dataProvider = dataProvider
         self.storageManager = storageManager
         self.onExit = onExit
-
         super.init(nibName: nil, bundle: nil)
     }
 

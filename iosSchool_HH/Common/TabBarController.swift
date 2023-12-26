@@ -19,7 +19,6 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tabBar.backgroundColor = UIColor(named: "iceberg-color")
         tabBar.isTranslucent = false
         tabBar.tintColor = .clear

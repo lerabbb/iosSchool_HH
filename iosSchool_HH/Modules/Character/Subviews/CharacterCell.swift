@@ -60,5 +60,4 @@ class CharacterCell: UICollectionViewCell, CoreCellView {
         infoLabel.text = inputData.info ?? ""
         imageView.image = inputData.image ?? UIImage(named: "placeholder")
     }
-
 }

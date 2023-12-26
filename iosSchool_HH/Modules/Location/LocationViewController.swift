@@ -15,7 +15,6 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
 
     init(dataProvider: LocationDataProvider) {
         self.dataProvider = dataProvider
-
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -31,12 +30,11 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
         findAllLocations()
     }
 
-// MARK: - Private
+    // MARK: - Private
 
     private func findAllLocations() {
-        dataProvider.findAllLocations { [weak self] list, error in
+        dataProvider.findAllLocations { [weak self] list, _ in
             guard let list else {
-                print(error?.rawValue ?? "no error")
                 return
             }
             self?.rootView.update(data: LocationViewData(list: list))
@@ -59,7 +57,6 @@ class LocationViewController<View: LocationViewImp>: BaseViewController<View> {
 
     @objc
     private func reload() {
-        print("update table data")
         findAllLocations()
     }
 }

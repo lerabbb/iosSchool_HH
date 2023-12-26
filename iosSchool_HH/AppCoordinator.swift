@@ -24,6 +24,8 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         )
     }
 
+    // MARK: - Private
+
     private func authBootstrap() {
         guard assembly.storageManager.getToken() == nil else {
             setTabVC()

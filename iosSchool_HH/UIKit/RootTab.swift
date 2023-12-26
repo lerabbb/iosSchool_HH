@@ -9,7 +9,7 @@ import UIKit
 
 enum RootTab: Int {
     case locations = 0
-    case profile
+    case profile = 1
 
     var tabBarItem: UITabBarItem {
         let tabBarItem = UITabBarItem(

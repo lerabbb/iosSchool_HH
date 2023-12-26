@@ -28,8 +28,8 @@ class LocationViewImp: UIView, LocationView {
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
-        imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
@@ -44,15 +44,14 @@ class LocationViewImp: UIView, LocationView {
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
-        tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: topAnchor, constant: 4).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
     func update(data: LocationViewData) {
         viewData = data
-
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -82,7 +81,6 @@ extension LocationViewImp: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension LocationViewImp: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let viewData else {

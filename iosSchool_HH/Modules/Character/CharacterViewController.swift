@@ -12,7 +12,6 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
     var selectCharacter: ((CharacterCellData) -> Void)?
 
     private var characters: [Character] = []
-
     private let dataProvider: CharacterDataProvider
     private let charactersUrlList: [String]
     private let updateQueue = DispatchQueue(label: "CharacterRequestQueue")
@@ -20,7 +19,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
 
     init(dataProvider: CharacterDataProvider, data: LocationCellData, imageService: ImageService) {
         self.dataProvider = dataProvider
-        charactersUrlList = data.residents
+        self.charactersUrlList = data.residents
         self.imageService = imageService
         super.init(nibName: nil, bundle: nil)
         title = "Жители локации \(data.name)"

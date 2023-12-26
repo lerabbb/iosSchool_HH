@@ -114,8 +114,8 @@ class AuthViewImp: UIView, AuthView {
 
     @objc
     private func keyboardWillHide() {
-        self.scrollView.contentInset = .zero
-        self.scrollView.verticalScrollIndicatorInsets = .zero
+        scrollView.contentInset = .zero
+        scrollView.verticalScrollIndicatorInsets = .zero
     }
 
     private func styleLabelView(view: UIView) {
