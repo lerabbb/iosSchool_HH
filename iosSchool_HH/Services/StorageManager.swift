@@ -14,7 +14,7 @@ protocol StorageManager {
     func getToken() -> TokenResponse?
     func removeToken()
     func saveLastAuthDate()
-    func getLastAuthDate() -> String
+    func getLastAuthDate() -> String?
 }
 
 class StorageManagerImp: StorageManager {
@@ -70,9 +70,9 @@ class StorageManagerImp: StorageManager {
         UserDefaults.standard.set(Date(), forKey: StorageManagerKey.lastAuthDate.rawValue)
     }
 
-    func getLastAuthDate() -> String {
+    func getLastAuthDate() -> String? {
         guard let date = UserDefaults.standard.object(forKey: StorageManagerKey.lastAuthDate.rawValue) as? Date else {
-            return ".. .. ...."
+            return nil
         }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"

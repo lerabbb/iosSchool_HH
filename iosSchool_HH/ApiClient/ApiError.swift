@@ -19,10 +19,10 @@ enum ApiError: Error {
         case .serverError:
             return "Ошибка получения данных"
         case let .common(data):
-            if let data {
-                return String(decoding: data, as: UTF8.self)
+            guard let data else {
+                return "Произошла неизвестная ошибка"
             }
-            return "Произошла неизвестная ошибка"
+            return String(decoding: data, as: UTF8.self)
         }
     }
 }

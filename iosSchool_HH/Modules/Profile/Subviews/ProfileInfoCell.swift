@@ -45,7 +45,7 @@ class ProfileInfoCell: UICollectionViewCell, CoreCellView {
         dateLabel.isHidden = inputData.infoType.isNotDate()
         dateLabel.text = inputData.authDate
         colorView.isHidden = inputData.infoType.isNotColor()
-        colorView.backgroundColor = inputData.profileColor ?? UIColor(named: "iceberg-color")
+        colorView.backgroundColor = inputData.profileColor
     }
 
     // MARK: - Private

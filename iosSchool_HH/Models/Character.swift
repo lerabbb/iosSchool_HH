@@ -13,20 +13,12 @@ class Character: Codable {
         case male = "Male"
         case genderless = "Genderless"
         case unknown = "unknown"
-
-        static func random() -> Gender {
-            return allCases.randomElement() ?? unknown
-        }
     }
 
     enum Status: String, CaseIterable, Codable {
         case alive = "Alive"
         case dead = "Dead"
         case unknown = "unknown"
-
-        static func random() -> Status {
-            return allCases.randomElement() ?? unknown
-        }
     }
 
     let id: Int

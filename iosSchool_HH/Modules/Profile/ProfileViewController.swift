@@ -57,7 +57,7 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         )
         HUD.show(.progress)
         guard let userId = storageManager.getToken()?.userId else {
-            self.showFail(error: "token not found")
+            showFail(error: "token not found")
             return
         }
 

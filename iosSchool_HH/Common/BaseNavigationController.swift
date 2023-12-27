@@ -20,6 +20,10 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
         navigationBar.standardAppearance = navigationBarAppearance
         navigationBar.scrollEdgeAppearance = navigationBarAppearance
         navigationBar.compactAppearance = navigationBarAppearance
+        navigationBar.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        navigationBar.layer.shadowOpacity = 1
+        navigationBar.layer.shadowRadius = 8
+        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
     override var childForStatusBarStyle: UIViewController? {

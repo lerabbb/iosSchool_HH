@@ -23,6 +23,12 @@ struct ProfileInfoCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
 
     let infoType: PofileInfoType
-    let authDate: String?
+    let authDate: String
     let profileColor: UIColor?
+
+    init(infoType: PofileInfoType, authDate: String?, profileColor: UIColor?) {
+        self.infoType = infoType
+        self.authDate = authDate ?? ".. .. ...."
+        self.profileColor = profileColor ?? UIColor(named: "iceberg-color")
+    }
 }

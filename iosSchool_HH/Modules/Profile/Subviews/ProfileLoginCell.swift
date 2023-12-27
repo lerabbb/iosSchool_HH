@@ -28,6 +28,6 @@ class ProfileLoginCell: UICollectionViewCell, CoreCellView {
     }
 
     func update(with inputData: ProfileLoginCellData) {
-        loginLabel.text = inputData.login ?? ""
+        loginLabel.text = inputData.login
     }
 }

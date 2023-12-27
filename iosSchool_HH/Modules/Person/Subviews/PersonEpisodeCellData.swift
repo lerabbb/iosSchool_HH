@@ -11,16 +11,16 @@ struct PersonEpisodeCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
 
     let number: String
-    let name: String?
-    let airDate: String?
+    let name: String
+    let airDate: String
 
     init?(url: String) {
         guard let url = URL(string: url) else {
             return nil
         }
         number = url.lastPathComponent
-        name = nil
-        airDate = nil
+        name = ""
+        airDate = ""
     }
 
     init?(episode: Episode) {

@@ -37,6 +37,6 @@ struct CharacterCellData: CoreCellInputData {
         info = nil
         imageUrl = nil
         image = nil
-        self.episodes = []
+        episodes = []
     }
 }

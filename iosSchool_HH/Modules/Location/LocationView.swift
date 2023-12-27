@@ -9,6 +9,7 @@ import UIKit
 
 protocol LocationView: UIView {
     var selectLocation: ((LocationCellData) -> Void)? { get set }
+
     func setView()
     func update(data: LocationViewData)
 }

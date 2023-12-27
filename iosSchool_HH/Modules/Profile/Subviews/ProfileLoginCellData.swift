@@ -10,5 +10,9 @@ import Foundation
 struct ProfileLoginCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
 
-    let login: String?
+    let login: String
+
+    init(login: String?) {
+        self.login = login ?? ""
+    }
 }

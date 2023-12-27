@@ -19,9 +19,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         let coordinator = assembly.splashCoordinator { [weak self] in
             self?.authBootstrap()
         }
-        setRoot(
-            viewController: coordinator.make()
-        )
+        setRoot(viewController: coordinator.make())
     }
 
     // MARK: - Private
@@ -31,7 +29,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
             setTabVC()
             return
         }
-        let authCoordinator = assembly.authCoordinator { [ weak self ] in
+        let authCoordinator = assembly.authCoordinator { [weak self] in
             DispatchQueue.main.async {
                 self?.setTabVC()
             }

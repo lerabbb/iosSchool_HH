@@ -12,4 +12,9 @@ struct ProfilePhotoCellData: CoreCellInputData {
 
     let smallAvatarImg: UIImage?
     let largeAvatarImg: UIImage?
+
+    init(smallAvatarImg: UIImage?, largeAvatarImg: UIImage?) {
+        self.smallAvatarImg = smallAvatarImg ?? UIImage(named: "placeholder")
+        self.largeAvatarImg = largeAvatarImg ?? UIImage(named: "placeholder")
+    }
 }

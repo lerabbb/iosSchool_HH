@@ -14,7 +14,7 @@ struct PersonPhotoCellData: CoreCellInputData {
     let image: UIImage?
 
     init(image: UIImage?) {
-        self.image = image
-        self.isLoading = (image == nil)
+        self.image = image ?? UIImage(named: "placeholder")
+        self.isLoading = image == nil
     }
 }

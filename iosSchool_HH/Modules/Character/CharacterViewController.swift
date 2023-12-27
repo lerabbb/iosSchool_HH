@@ -39,7 +39,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
         }))
 
         let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] data in
-            guard let data = data as? CharacterCellData else {// !data.isLoading else {
+            guard let data = data as? CharacterCellData else {
                 return
             }
             self?.selectCharacter?(data)
@@ -58,9 +58,9 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                         selectClosure: selectClosure
                     ))
                 }
-                self.imageService.getImage(url: character.image, completion: { image in
+                self.imageService.getImage(url: character.image, completion: { [weak self] image in
                     DispatchQueue.main.async {
-                        self.rootView.updateCharacter(idx: idx, with: CharacterCellData(
+                        self?.rootView.updateCharacter(idx: idx, with: CharacterCellData(
                             character: character,
                             isLoading: false,
                             image: image,

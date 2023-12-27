@@ -49,6 +49,6 @@ class PersonPhotoCell: UICollectionViewCell, CoreCellView {
             indicator.stopAnimating()
             imageView.layer.opacity = 1
         }
-        imageView.image = inputData.image ?? UIImage(named: "placeholder")
+        imageView.image = inputData.image
     }
 }

@@ -107,7 +107,6 @@ class Section<Cell: CoreCellView, Header: CoreReusableView, Footer: CoreReusable
         }
         cellsData[path.row] = data
         collectionView?.reloadItems(at: [path])
-
     }
 }
 

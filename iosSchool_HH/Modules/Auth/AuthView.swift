@@ -131,7 +131,7 @@ class AuthViewImp: UIView, AuthView {
     private func styleTextField(textField: UITextField, placeholderText: String?) {
         textField.clipsToBounds = true
         textField.borderStyle = .none
-        textField.layer.backgroundColor = UIColor(red: 0.897, green: 0.897, blue: 0.897, alpha: 1).cgColor
+        textField.layer.backgroundColor = UIColor(named: "textfield-color")?.cgColor
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(.black).cgColor

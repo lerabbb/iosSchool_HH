@@ -74,6 +74,7 @@ class RegistrationViewImp: UIView, RegistrationView {
     private func viewDidTap() {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        repeatPswdTextField.resignFirstResponder()
     }
 
     @IBAction

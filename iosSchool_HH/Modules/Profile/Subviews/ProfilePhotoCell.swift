@@ -34,7 +34,7 @@ class ProfilePhotoCell: UICollectionViewCell, CoreCellView {
     }
 
     func update(with inputData: ProfilePhotoCellData) {
-        backgroundImageView.image = inputData.largeAvatarImg ?? UIImage(named: "placeholder")
-        photoImageView.image = inputData.smallAvatarImg ?? UIImage(named: "placeholder")
+        backgroundImageView.image = inputData.largeAvatarImg
+        photoImageView.image = inputData.smallAvatarImg
     }
 }
